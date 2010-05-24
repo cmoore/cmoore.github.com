@@ -1,0 +1,26 @@
+---
+layout: default
+title: www.l2mlogistics.com
+---
+
+<div id="home">
+
+  <div id="par">
+    I'm Clint Moore and I'm a big nerd<br>
+  </div>
+  <br/>
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+  </ul>
+
+  <h1>Big Thanks To</h1>
+  <ul class="posts">
+    <li><a href="http://www.haskell.org/ghc">The Glasgow Haskell Compiler</a></li>
+    <li><a href="http://www.netbsd.org/">The NetBSD Project</a></li>
+    <li><a href="http://github.com/mojombo/jekyll">Jekyll and Tom Preston-Werner</a></li>
+  </ul>
+
+</div>

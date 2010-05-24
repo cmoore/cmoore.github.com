@@ -1,0 +1,10 @@
+---
+layout: post
+title: Royale With Cheese
+---
+
+h1. {{ page.title }}
+
+p(meta). Sometimes simple really is better.
+
+This is the info page for RWC.  I'm going to update it here in just a sec - after I make sure that it's accessable.
