@@ -1,0 +1,15 @@
+---
+layout: post
+title: Oh yea...
+---
+
+h1. {{ page.title }}
+
+p(meta). Web Programming With Haskell
+
+This is an ongoing post about my experience developing a commercial web site in Haskell.
+
+Also, I'm making sure that the github jekyll publish thingy works too.  Heh.
+
+Now that I think about it, maybe I should check out heckyll.
+
