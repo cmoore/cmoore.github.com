@@ -1,0 +1,16 @@
+---
+layout: post
+title: FreeBSD
+---
+
+h1. {{ page.title }}
+
+p(meta). FreeBSD on the desktop
+
+I've always loved FreeBSD and NetBSD for their simplicity and organization.  Plus, the ports trees really make things nice.
+
+After my last game-fest with <a href="http://twitter.com/apnelson">@apnelson</a> I decided to start using it full time and the results are great.  I haven't found anything that I'd like to do that I can't.  Now, sure, the setup and configuration isn't as fire-and-forget as Ubuntu, but I swear it's an order of magnitude faster.
+
+Also, everyone seems to be convinced that I have adult ADD, most notably my wife.  So I went and saw a doctor yesterday and he seems just as if not more convinced.  Now I just have to wait 6 MONTHS to see them again.  If you are a psychiatrist, apparently there's an incredible demand for your services in the Seattle area.
+
+Also, I have to plan my 5th wedding anniversary today so I'm absolutely stressed to the max to get that right.  Yay.
