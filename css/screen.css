@@ -9,6 +9,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Verdana;
 }
 
 html, body {
@@ -17,7 +18,7 @@ html, body {
 
 body {
   background-color: white;
-  font: 13.34px tahoma, helvetica, arial, clean, sans-serif;
+  font: 13.34px Verdana, tahoma, helvetica, arial, clean, sans-serif;
   *font-size: small;
   text-align: center;
 }
@@ -36,6 +37,7 @@ p {
 
 a {
   color: #00a;
+  text-decoration: none;
 }
 
 a:hover {
@@ -43,7 +45,7 @@ a:hover {
 }
 
 a:visited {
-  color: #a0a;
+    text-decoration: none;
 }
 
 table {
@@ -67,8 +69,7 @@ ul.posts {
   }
 
   ul.posts span {
-    color: #aaa;
-    font-family: tahoma, Monaco, "Courier New", monospace;
+    color: black;
     font-size: 80%;
   }
 
