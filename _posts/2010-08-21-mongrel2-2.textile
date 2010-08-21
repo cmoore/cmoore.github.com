@@ -1,0 +1,11 @@
+---
+layout: post
+title: Mongrel2 again
+---
+
+h1. {{ page.title }}
+
+p(meta). Mongrel2
+
+  Web.Mongrel2 is going to get some serious attention next week as I'll be on vacation.  It's definitely one of my favorite things to do whilst vacationing.  One of my favorites was a weeklong Alaskan cruise during which I learned Erlang.  Looking back, that was very relaxing.
+
