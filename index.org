@@ -56,3 +56,6 @@ While I'm definitely not the best Haskell programmer, I'm trying to get better. 
 
 ** Bidness
 
+#+INCLUDE: "~/Dropbox/org/disq_start.org"
+#+INCLUDE: "~/Dropbox/org/html_tail.org"
+
