@@ -11,8 +11,95 @@
 ** Personal
 *** Blogging with org-mode and github.
 I guess it doesn't really even need to use jekyll.  Not that I necessarily have a problem with it, per se.
-*** Parallel Haskelling
 ** Technical
+*** Parallel Haskelling
+
+Well, not really, but sort of.
+
+Take this code from http://cgi.cse.unsw.edu.au/~dons/blog/2007/11/29
+
+#+BEGIN_HTML
+<script src="http://gist.github.com/203829.js"></script>
+#+END_HTML
+
+Now, compiling it with no optimization, I get the following:
+
+#+BEGIN_EXAMPLE
+ghc --make fib.hs
+time ./fib
+real 5m50.175s
+user 5m48.994s
+sys 0m0.737s
+
+ghc --make fib.hs -O2
+time ./fib
+real 5m48.966s
+user 5m48.374s
+sys 0m0.460s
+#+END_EXAMPLE
+
+Now with this code:
+
+#+BEGIN_HTML
+<script src="http://gist.github.com/203847.js"></script>
+#+END_HTML
+
+#+BEGIN_EXAMPLE
+ghc --make -O2 -threaded
+time ./pfib (Note the lack of RTS switches)
+real 2m33.192s
+user 2m32.883s
+sys 0m0.173s
+
+time ./pfib +RTS -N2
+real 1m44.426s
+user 2m38.416s
+sys 0m1.587s
+
+time ./pfib +RTS -N6 (It's an 8-core i7.  Well, 8 thread?  Does it actually do hyperthreading? I don't know)
+real 1m24.359s
+user 3m16.734s
+sys 0m12.852s
+#+END_EXAMPLE
+
+
+Now with the optimized code
+
+#+BEGIN_HTML
+<script src="http://gist.github.com/203853.js"></script>
+#+END_HTML
+
+#+BEGIN_EXAMPLE
+ghc --make -O2 -threaded sfib.hs
+time ./sfib
+real 1m3.752s
+user 1m3.613s
+sys 0m0.097s
+
+time ./sfib +RTS -N2
+real 0m33.545s
+user 1m4.122s
+sys 0m0.343s
+
+time ./sfib +RTS -N4
+real 0m17.462s
+user 1m3.783s
+sys 0m0.450s
+
+time ./sfib +RTS -N6
+real 0m16.076s
+user 1m23.578s
+sys 0m0.773s
+
+time ./sfib +RTS -N8
+real 11m55.785s
+user 79m21.816s
+sys 0m5.523s
+#+END_EXAMPLE
+
+Heh, for the first time since I bought the machine I heard the internal fans spin up to jet engine speeds.
+
+Hrm, according to wikipedia, the processor is 4x but the Linux kernel sees 8. So it's 4 cores + hyperthreading or something?  To be honest, I really don't care.  It's fast enough to keep me entertained for quite a while.
 *** Project Euler in Haskell
 **** Problem 8
 #+BEGIN_HTML

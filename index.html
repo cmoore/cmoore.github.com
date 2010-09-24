@@ -7,7 +7,7 @@ lang="en" xml:lang="en">
 <title>Clint Moore</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2010-09-24 01:11:12 PDT"/>
+<meta name="generated" content="2010-09-24 01:20:51 PDT"/>
 <meta name="author" content="Clint Moore"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -132,12 +132,12 @@ org_html_manager.setup();  // activate after the parameters are set
 <li><a href="#sec-1">1 Personal </a>
 <ul>
 <li><a href="#sec-1_1">1.1 Blogging with org-mode and github. </a></li>
-<li><a href="#sec-1_2">1.2 Parallel Haskelling </a></li>
 </ul>
 </li>
 <li><a href="#sec-2">2 Technical </a>
 <ul>
-<li><a href="#sec-2_1">2.1 Project Euler in Haskell </a></li>
+<li><a href="#sec-2_1">2.1 Parallel Haskelling </a></li>
+<li><a href="#sec-2_2">2.2 Project Euler in Haskell </a></li>
 </ul>
 </li>
 <li><a href="#sec-3">3 Bidness </a></li>
@@ -158,14 +158,6 @@ org_html_manager.setup();  // activate after the parameters are set
 
 <p>I guess it doesn't really even need to use jekyll.  Not that I necessarily have a problem with it, per se.
 </p></div>
-
-</div>
-
-<div id="outline-container-1_2" class="outline-4">
-<h4 id="sec-1_2"><span class="section-number-4">1.2</span> Parallel Haskelling </h4>
-<div class="outline-text-4" id="text-1_2">
-
-</div>
 </div>
 
 </div>
@@ -178,36 +170,146 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 
 <div id="outline-container-2_1" class="outline-4">
-<h4 id="sec-2_1"><span class="section-number-4">2.1</span> Project Euler in Haskell </h4>
+<h4 id="sec-2_1"><span class="section-number-4">2.1</span> Parallel Haskelling </h4>
 <div class="outline-text-4" id="text-2_1">
 
+
+<p>
+Well, not really, but sort of.
+</p>
+<p>
+Take this code from <a href="http://cgi.cse.unsw.edu.au/~dons/blog/2007/11/29">http://cgi.cse.unsw.edu.au/~dons/blog/2007/11/29</a>
+</p>
+
+
+<script src="http://gist.github.com/203829.js"></script>
+
+<p>
+Now, compiling it with no optimization, I get the following:
+</p>
+
+
+
+<pre class="example">ghc --make fib.hs
+time ./fib
+real 5m50.175s
+user 5m48.994s
+sys 0m0.737s
+
+ghc --make fib.hs -O2
+time ./fib
+real 5m48.966s
+user 5m48.374s
+sys 0m0.460s
+</pre>
+
+
+
+<p>
+Now with this code:
+</p>
+
+
+<script src="http://gist.github.com/203847.js"></script>
+
+
+<pre class="example">ghc --make -O2 -threaded
+time ./pfib (Note the lack of RTS switches)
+real 2m33.192s
+user 2m32.883s
+sys 0m0.173s
+
+time ./pfib +RTS -N2
+real 1m44.426s
+user 2m38.416s
+sys 0m1.587s
+
+time ./pfib +RTS -N6 (It's an 8-core i7.  Well, 8 thread?  Does it actually do hyperthreading? I don't know)
+real 1m24.359s
+user 3m16.734s
+sys 0m12.852s
+</pre>
+
+
+
+
+<p>
+Now with the optimized code
+</p>
+
+
+<script src="http://gist.github.com/203853.js"></script>
+
+
+<pre class="example">ghc --make -O2 -threaded sfib.hs
+time ./sfib
+real 1m3.752s
+user 1m3.613s
+sys 0m0.097s
+
+time ./sfib +RTS -N2
+real 0m33.545s
+user 1m4.122s
+sys 0m0.343s
+
+time ./sfib +RTS -N4
+real 0m17.462s
+user 1m3.783s
+sys 0m0.450s
+
+time ./sfib +RTS -N6
+real 0m16.076s
+user 1m23.578s
+sys 0m0.773s
+
+time ./sfib +RTS -N8
+real 11m55.785s
+user 79m21.816s
+sys 0m5.523s
+</pre>
+
+
+
+<p>
+Heh, for the first time since I bought the machine I heard the internal fans spin up to jet engine speeds.
+</p>
+<p>
+Hrm, according to wikipedia, the processor is 4x but the Linux kernel sees 8. So it's 4 cores + hyperthreading or something?  To be honest, I really don't care.  It's fast enough to keep me entertained for quite a while.
+</p></div>
+
+</div>
+
+<div id="outline-container-2_2" class="outline-4">
+<h4 id="sec-2_2"><span class="section-number-4">2.2</span> Project Euler in Haskell </h4>
+<div class="outline-text-4" id="text-2_2">
+
 <ul>
-<li id="sec-2_1_1">Problem 8 <br/>
+<li id="sec-2_2_1">Problem 8 <br/>
 <script src="http://gist.github.com/131687.js"></script>
 </li>
 </ul>
 <ul>
-<li id="sec-2_1_2">Problem 7 <br/>
+<li id="sec-2_2_2">Problem 7 <br/>
 <script src="http://gist.github.com/131685.js"></script>
 </li>
 </ul>
 <ul>
-<li id="sec-2_1_3">Problem 6 <br/>
+<li id="sec-2_2_3">Problem 6 <br/>
 <script src="http://gist.github.com/131684.js"></script>
 </li>
 </ul>
 <ul>
-<li id="sec-2_1_4">Problem 5 <br/>
+<li id="sec-2_2_4">Problem 5 <br/>
 <script src="http://gist.github.com/131683.js"></script>
 </li>
 </ul>
 <ul>
-<li id="sec-2_1_5">Problem 4 <br/>
+<li id="sec-2_2_5">Problem 4 <br/>
 <script src="http://gist.github.com/131681.js"></script>
 </li>
 </ul>
 <ul>
-<li id="sec-2_1_6">Problem 3 <br/>
+<li id="sec-2_2_6">Problem 3 <br/>
 The funky thing is that I solved it with this, but I don't remember how I did it.  It was a late night hackfest / Star Trek TOS marathon in my garage.
 
 <p>
@@ -220,13 +322,13 @@ I hate wondering what the hell I was thinking when I wrote something.
 </li>
 </ul>
 <ul>
-<li id="sec-2_1_7">Problem 2 <br/>
+<li id="sec-2_2_7">Problem 2 <br/>
 <script src="http://gist.github.com/131429.js"></script>
 
 </li>
 </ul>
 <ul>
-<li id="sec-2_1_8">Problem 1 <br/>
+<li id="sec-2_2_8">Problem 1 <br/>
 While I'm definitely not the best Haskell programmer, I'm trying to get better.  These posts are my solutions to Project Euler.
 <script src="http://gist.github.com/131428.js"></script>
 
@@ -282,7 +384,7 @@ var disqus_shortname = 'hellyeahdotorg';
 <div id="postamble">
 <p class="author"> Author: Clint Moore
 </p>
-<p class="date"> Date: 2010-09-24 01:11:12 PDT</p>
+<p class="date"> Date: 2010-09-24 01:20:51 PDT</p>
 <p class="creator">HTML generated by org-mode 7.01trans in emacs 23</p>
 </div>
 </div>
