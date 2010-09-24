@@ -1,0 +1,58 @@
+
+#+INCLUDE: "~/Dropbox/org/html_head.org"
+#+INFOJS_OPT: view:info path:http://orgmode.org/org-info.js 
+
+#+TITLE: Clint Moore
+#+AUTHOR: Clint Moore
+#+EMAIL: cmoore@wamboli.com
+#+TEXT: There's a turd in the punchbowl.
+#+LANGUAGE: en
+
+** Personal
+*** Blogging with org-mode and github.
+I guess it doesn't really even need to use jekyll.  Not that I necessarily have a problem with it, per se.
+*** Parallel Haskelling
+** Technical
+*** Project Euler in Haskell
+**** Problem 8
+#+BEGIN_HTML
+<script src="http://gist.github.com/131687.js"></script>
+#+END_HTML
+**** Problem 7
+#+BEGIN_HTML
+<script src="http://gist.github.com/131685.js"></script>
+#+END_HTML
+**** Problem 6
+#+BEGIN_HTML
+<script src="http://gist.github.com/131684.js"></script>
+#+END_HTML
+**** Problem 5
+#+BEGIN_HTML
+<script src="http://gist.github.com/131683.js"></script>
+#+END_HTML
+**** Problem 4
+#+BEGIN_HTML
+<script src="http://gist.github.com/131681.js"></script>
+#+END_HTML
+**** Problem 3
+The funky thing is that I solved it with this, but I don't remember how I did it.  It was a late night hackfest / Star Trek TOS marathon in my garage.
+
+I hate wondering what the hell I was thinking when I wrote something.
+
+#+BEGIN_HTML
+<script src="http://gist.github.com/131680.js"></script>
+#+END_HTML
+
+**** Problem 2
+#+BEGIN_HTML
+<script src="http://gist.github.com/131429.js"></script>
+#+END_HTML
+
+**** Problem 1
+While I'm definitely not the best Haskell programmer, I'm trying to get better.  These posts are my solutions to Project Euler.
+#+BEGIN_HTML
+<script src="http://gist.github.com/131428.js"></script>
+#+END_HTML
+
+** Bidness
+

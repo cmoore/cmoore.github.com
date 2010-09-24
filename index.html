@@ -1,30 +1,264 @@
----
-layout: default
-title: www.hellyeah.org
----
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Clint Moore</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2010-09-24 00:54:01 PDT"/>
+<meta name="author" content="Clint Moore"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript" src="http://orgmode.org/org-info.js"></script>
+<script type="text/javascript" >
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
 
-<div id="home">
-  <div id="par">
-    Somtimes I code slow, sometimes I code quick.. quick... quick...
-  </div>
-  <br/>
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-  </ul>
+</head>
+<body>
+<div id="content">
 
-  <h1>Projects of Interest</h1>
-  <ul class="posts">
-    <li><a href="http://github.com/cmoore/web-mongrel2">Haskell Mongrel2 library</a></li>
-    <li><a href="http://github.com/cmoore/hack-handler-mongrel2">Mongrel2 handler for Hack using the above library.</a></li>
-  </ul>
-  <h1>Big Thanks To</h1>
-  <ul class="posts">
-    <li><a href="http://www.haskell.org/ghc">The Glasgow Haskell Compiler</a></li>
-    <li><a href="http://www.netbsd.org/">The NetBSD Project</a></li>
-    <li><a href="http://github.com/mojombo/jekyll">Jekyll and Tom Preston-Werner</a></li>
-  </ul>
+<h1 class="title">Clint Moore</h1>
+
+<p>There's a turd in the punchbowl.
+</p>
+
+
+<script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/webfont/1.0.9/webfont.js"></script>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Vollkorn', 'Molengo', 'Inconsolata', 'Tangerine', 'Cantarell' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[1];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+<style type="text/css"> 
+	p {
+	width: 800px;
+	}
+   .wf-active pre, code {
+     font-family: 'Inconsolata';
+		 font-size: 16px;
+   }
+   .wf-active p, li, h1, h2, h3, h4 {
+     font-family: 'Cantarell', serif;
+	 }
+</style>
+
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Personal </a>
+<ul>
+<li><a href="#sec-1_1">1.1 Blogging with org-mode and github. </a></li>
+<li><a href="#sec-1_2">1.2 Parallel Haskelling </a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Technical </a>
+<ul>
+<li><a href="#sec-2_1">2.1 Project Euler in Haskell </a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 Bidness </a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-3">
+<h3 id="sec-1"><span class="section-number-3">1</span> Personal </h3>
+<div class="outline-text-3" id="text-1">
+
 
 </div>
+
+<div id="outline-container-1_1" class="outline-4">
+<h4 id="sec-1_1"><span class="section-number-4">1.1</span> Blogging with org-mode and github. </h4>
+<div class="outline-text-4" id="text-1_1">
+
+<p>I guess it doesn't really even need to use jekyll.  Not that I necessarily have a problem with it, per se.
+</p></div>
+
+</div>
+
+<div id="outline-container-1_2" class="outline-4">
+<h4 id="sec-1_2"><span class="section-number-4">1.2</span> Parallel Haskelling </h4>
+<div class="outline-text-4" id="text-1_2">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2"><span class="section-number-3">2</span> Technical </h3>
+<div class="outline-text-3" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2_1" class="outline-4">
+<h4 id="sec-2_1"><span class="section-number-4">2.1</span> Project Euler in Haskell </h4>
+<div class="outline-text-4" id="text-2_1">
+
+<ul>
+<li id="sec-2_1_1">Problem 8 <br/>
+<script src="http://gist.github.com/131687.js"></script>
+</li>
+</ul>
+<ul>
+<li id="sec-2_1_2">Problem 7 <br/>
+<script src="http://gist.github.com/131685.js"></script>
+</li>
+</ul>
+<ul>
+<li id="sec-2_1_3">Problem 6 <br/>
+<script src="http://gist.github.com/131684.js"></script>
+</li>
+</ul>
+<ul>
+<li id="sec-2_1_4">Problem 5 <br/>
+<script src="http://gist.github.com/131683.js"></script>
+</li>
+</ul>
+<ul>
+<li id="sec-2_1_5">Problem 4 <br/>
+<script src="http://gist.github.com/131681.js"></script>
+</li>
+</ul>
+<ul>
+<li id="sec-2_1_6">Problem 3 <br/>
+The funky thing is that I solved it with this, but I don't remember how I did it.  It was a late night hackfest / Star Trek TOS marathon in my garage.
+
+<p>
+I hate wondering what the hell I was thinking when I wrote something.
+</p>
+
+
+<script src="http://gist.github.com/131680.js"></script>
+
+</li>
+</ul>
+<ul>
+<li id="sec-2_1_7">Problem 2 <br/>
+<script src="http://gist.github.com/131429.js"></script>
+
+</li>
+</ul>
+<ul>
+<li id="sec-2_1_8">Problem 1 <br/>
+While I'm definitely not the best Haskell programmer, I'm trying to get better.  These posts are my solutions to Project Euler.
+<script src="http://gist.github.com/131428.js"></script>
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3"><span class="section-number-3">3</span> Bidness </h3>
+<div class="outline-text-3" id="text-3">
+
+
+
+
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+<p class="footnote"><sup><a class="footnum" name="fn.1" href="#fnr.1">1</a></sup> FOOTNOTE DEFINITION NOT FOUND: 0
+</p>
+</div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Clint Moore
+</p>
+<p class="date"> Date: 2010-09-24 00:54:01 PDT</p>
+<p class="creator">HTML generated by org-mode 7.01trans in emacs 23</p>
+</div>
+</div>
+</body>
+</html>
