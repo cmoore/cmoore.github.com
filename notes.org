@@ -1,6 +1,75 @@
 
-#+INCLUDE: "~/Dropbox/org/html_head.org"
-#+INFOJS_OPT: view:info path:http://orgmode.org/org-info.js 
+#+BEGIN_HTML
+<script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/webfont/1.0.9/webfont.js"></script>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Droid Serif','Vollkorn', 'Molengo', 'Inconsolata', 'Tangerine', 'Cantarell' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: 'Droid Serif', Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+border: 1pt solid #AEBDCC;
+background-color: #F3F5F7;
+padding: 5pt;
+font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  #footnotes { display: none; }
+  #postamble { display: none; }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" title="Classical Worg" href="http://orgmode.org/worg/worg.css" type="text/css" />
+<link rel="alternate stylesheet" title="NextWorg" href="http://orgmode.org/worg/worg2.css" type="text/css" />
+<style>
+* {
+	font-family: 'Cantarell;
+}
+li {font-size: 16px;}
+li p {font-size: 14px;}
+h2 { border-bottom: 1px solid #DDDDDD;}
+.title { border-bottom: 1px solid #DDDDDD;}
+#table-of-contents h2 {font-size: 12px;border-bottom:1px solid #DDDDDD;}
+#table-of-contents li {font-size: 10px;}
+.section-number-2 { display: none; }
+</style>
+#+END_HTML
+
+#+INFOJS_OPT: view:content toc:nil 
+#+INFOJS_OPT: path:http://orgmode.org/org-info.js 
 
 #+TITLE: Clint Moore
 #+AUTHOR: Clint Moore
@@ -8,10 +77,10 @@
 #+TEXT: There's a turd in the punchbowl.
 #+LANGUAGE: en
 
-** Personal
+* Personal
 *** Blogging with org-mode and github.
 I guess it doesn't really even need to use jekyll.  Not that I necessarily have a problem with it, per se.
-** Technical
+* Technical
 *** Parallel Haskelling
 
 Well, not really, but sort of.
@@ -141,7 +210,7 @@ While I'm definitely not the best Haskell programmer, I'm trying to get better. 
 <script src="http://gist.github.com/131428.js"></script>
 #+END_HTML
 
-** Bidness
+* Bidness
 
 #+INCLUDE: "~/Dropbox/org/disq_start.org"
 #+INCLUDE: "~/Dropbox/org/html_tail.org"
