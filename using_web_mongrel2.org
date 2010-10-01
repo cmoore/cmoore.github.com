@@ -30,7 +30,7 @@
 #+END_HTML
 #+INFOJS_OPT: view:content path:http://orgmode.org/org-info.js 
 
-#+TITLE: Web.Mongrel2
+#+TITLE: Web.Mongrel2/Hack.Handler.Mongrel2
 
 This will be the Web.Mongrel2 docs.
 
