@@ -1,0 +1,11 @@
+---
+layout: post
+title: Employment!
+---
+
+h1. {{ page.title }}
+
+p(meta). Feels good, man.
+
+Wow, I'm employed and working with Haskell.  This is definitely the high point of my career so far.
+
