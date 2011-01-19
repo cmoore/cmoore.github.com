@@ -7,6 +7,9 @@ h1. {{ page.title }}
 
 p(meta). The joy of pub/sub
 
-Testing gists..
+Testing gists
 
+<div class="code">
 <script src="https://gist.github.com/784949.js?file=gistfile1.hs"></script>
+</div>
+
