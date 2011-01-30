@@ -15,7 +15,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/webfont/1.0.9/webfont.js"></script>
 <script type="text/javascript">
   WebFontConfig = {
-    google: { families: [ 'Inconsolata','Ubuntu' ] }
+    google: { families: [ 'Inconsolata','Ubuntu','Slackey' ] }
   };
   (function() {
     var wf = document.createElement('script');
@@ -31,6 +31,10 @@
 	p {
 	width: 800px;
 	}
+    .ohai {
+      font-family: 'Slackey';
+      font-size:24px;
+    }
    .wf-active pre, .gist, .code, pre {
      font-family: 'Inconsolata' !important; 
 		 font-size: 12px;
@@ -44,7 +48,7 @@
 
 <div class="site">
   <div class="title">
-    <a href="/">Clint Moore</a>
+    <a class="ohai" href="/">Clint Moore</a>
     <a class="extra" href="/">home</a>
   </div>
   
