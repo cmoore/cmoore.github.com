@@ -38,7 +38,7 @@ p {
 }
 
 a {
-  color: #00a;
+  color: #386794;
   text-decoration: none;
 }
 
@@ -47,6 +47,7 @@ a:hover {
 }
 
 a:visited {
+		color: #6C88A2;
     text-decoration: none;
 }
 
