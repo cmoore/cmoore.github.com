@@ -14,11 +14,12 @@
 
 html, body {
   height: 100%;
+	color: #555;
 }
 
 body {
   background-color: white;
-  font: 13.34px Verdana, tahoma, helvetica, arial, clean, sans-serif;
+  font: 13.34px Slackey, Verdana, tahoma, helvetica, arial, clean, sans-serif;
   *font-size: small;
   text-align: center;
 }
