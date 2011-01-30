@@ -4,34 +4,47 @@ title: www.hellyeah.org
 ---
 
 <div id="home">
+
   <div id="par">
-    Somtimes I code slow, sometimes I code quick.. quick... quick...
+		&nbsp;
   </div>
+
   <br/>
-  <h1>Blog Posts</h1>
+
+  <h1>Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
   </ul>
 
-  <h1>Things I'm working on</h1>
+  <h1>I'm working on</h1>
   <ul class="posts">
     <li><a href="http://github.com/cmoore/web-mongrel2">Haskell Mongrel2 library</a></li>
     <li><a href="http://github.com/cmoore/hack-handler-mongrel2">Mongrel2 handler for Hack using the above library.</a></li>
     <li><a href="http://github.com/cmoore/inobuild">inobuild</a></li>
   </ul>
-  <h1>Things I used to work on</h1>
+  <h1>I used to work on</h1>
   <ul class="posts">
     <li><a href="http://github.com/cmoore/rwc">RWC in Haskell</a></li>
     <li><a href="http://github.com/cmoore/rwc-erlang">RWC in Erlang</a></li>
   </ul>
 
-  <h1>Big Thanks To</h1>
+  <h1>Things I Use</h1>
   <ul class="posts">
     <li><a href="http://www.haskell.org/ghc">The Glasgow Haskell Compiler</a></li>
     <li><a href="http://www.netbsd.org/">The NetBSD Project</a></li>
-    <li><a href="http://github.com/mojombo/jekyll">Jekyll and Tom Preston-Werner</a></li>
   </ul>
 
+	<h1>Sites I Use</h1>
+	<ul class="posts">
+		<li><a href="http://twitter.com/hydo">Twitter</a></li>
+		<li><a href="http://forrst.me/hydo">Forrst</a></li>
+		<li>
+			<a href="http://www.haskellers.com/user/3/"><img src="http://www.haskellers.com/static/badge.png" alt="I'm a Haskeller"></a>
+			<a href="http://stackexchange.com">
+<img src="http://stackexchange.com/users/flair/d32a490e7f954335955ea7be242768b4.png" width="208" height="58" alt="profile for hydo on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for hydo on Stack Exchange, a network of free, community-driven Q&amp;A sites">
+			</a>
+		</li>
+	</ul>
 </div>
