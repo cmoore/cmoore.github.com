@@ -9,7 +9,9 @@ p(meta). Better late than never
 
 Testing gists
 
-    data Fx = Fx {
-      f_ix :: String,
-      f_ax :: String
-    }
+{% highlight haskell %}
+data Fx = Fx {
+  f_ix :: String,
+  f_ax :: String
+}
+{% endhighlight %}
