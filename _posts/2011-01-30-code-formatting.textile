@@ -9,7 +9,7 @@ p(meta). Better late than never
 
 Testing gists
 
-{% highlight haskell linenos %}
+{% highlight haskell %}
 data Fx = Fx {
   f_ix :: String,
   f_ax :: String
