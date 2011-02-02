@@ -1,0 +1,79 @@
+---
+layout: post
+title: The great communicator
+---
+
+h1. {{ page.title }}
+
+p(meta). I used to dream of language interoperability like this
+
+h1. I will edit this page again later today (2/2/11) with cleaner working code.  It's not like anyone aside from me will read this anyway.
+
+In case you haven't heard, 0MQ is what we would end up with if we had to design the socket interface today.  Well, at least I think that.  Here's an example of why.
+
+First, I'll define a very simple message format.
+
+{% highlight javascript %}
+
+{ op: "parse_urls",
+  data: "This might be a tweet. http://www.slashdot.org or something." }
+
+{% endhighlight %}
+
+Where 'op' is the operation to perform, and data is the data to do it on.
+
+Then the response would look something like this.
+
+{% highlight javascript %}
+
+{ result: "This might be a tweet. <a href=\"http://www.slashdot.org/\">http://www.slashdot.org/</a>" }
+
+{% endhighlight %}
+
+
+Now, let's say you really like Parsec and Haskell's speed at which it can parse text with it.  Let's further assume that you had written something like this:
+
+{% highlight haskell %}
+
+url :: String -> Parser String
+url a = do
+  uri <- string "http:" <|> string "https:"
+  _ <- string "://"
+  rest <- many $ noneOf ["."," "]
+
+  return $ urlify $ uri + "://" ++ rest
+
+ where
+  urlify :: String -> String
+  urlify a = "<a href=\"" ++ a ++ "\">" ++ a ++ "\"</a>"
+
+{% endhighlight %}
+
+This is a quick one-off before I take off for the afternoon.  I'll come back and make sure it compiles, etc.
+
+
+Anyway, It's simple, works well (or it will later tonight), and it's fast.
+
+
+How can I use this in Lua, Ada, Basic, C, C++, C#, Chicken Scheme, D, Erlang, Go, Haskell (lawl), Java, node.js, Obj-C, ooc, Perl, Python, Racket, Ruby, or Tcl, as well as have it accessable and fast enough that it makes sense not to rewrite it for every language?  Well, I'll show you one way.
+
+
+{% highlight ruby %}
+context = ZMQ::Context.new(1)
+trap "INT", proc {
+  context.terminate()
+  exit
+}
+
+sock = context.socket( ZMQ::REQ )
+sock.connect( "tcp://127.0.0.1:6767" )
+sock.send_string(
+  [ :op => "parse_urls",
+    :data => "This might be a tweet http://slashdot.org with a url inside." ] )
+parsed = sock.recv_string()
+
+{% endhighlight %}
+
+
+All you really have to do is, at the beginning of your program, create a context, then when you are ready to make a connection to a data source, create a socket with "REQ", connect to the pre-determined host and port, send the request, get the response, and then destroy the socket.  This sort of thing is obviously begging for abstraction but I hope you get the general idea.
+
