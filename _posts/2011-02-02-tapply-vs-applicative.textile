@@ -7,7 +7,7 @@ h1. {{ page.title }}
 
 p(meta). I used to dream of language interoperability like this
 
-h1. I will edit this page again later today (2/2/11) with cleaner working code.  It's not like anyone aside from me will read this anyway.
+h1. I will edit this page again later today (2/2/11) with cleaner working code.  Though, I don't know what I'm worried about - I'm pretty sure I'm the only one that reads this.
 
 In case you haven't heard, 0MQ is what we would end up with if we had to design the socket interface today.  Well, at least I think that.  Here's an example of why.
 
