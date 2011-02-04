@@ -86,3 +86,7 @@ parsed = sock.recv_string()
 While this may be fun to play with, it's obviously not practical to have to make sure that there is another program available to provide url parsing.
 
 What we really need is Erlang-style message passing.  Hrm...
+
+.h1 Later...
+
+<a href="http://holumbus.fh-wedel.de/hayoo/hayoo.html?query=Control.Concurrent.Mailbox&start=0">Control.Concurrent.Mailbox</a> nullifies all of this.  Nice!
