@@ -35,25 +35,36 @@ Now, let's say you really like Parsec and Haskell's speed at which it can parse 
 
 {% highlight haskell %}
 
-url :: String -> Parser String
-url a = do
-  uri <- string "http:" <|> string "https:"
-  _ <- string "://"
-  rest <- many $ noneOf ["."," "]
+module Main where
 
-  return $ urlify $ uri + "://" ++ rest
+import Text.ParserCombinators.Parsec
+import Text.Groom
+import Data.List (intersperse)
 
+main :: IO ()
+main = do
+  putStrLn $ groom $ concat $ intersperse " " $ map mkp $
+    words "This is a tweet that might http://www.honk.com/ have a link inside."
  where
-  urlify :: String -> String
-  urlify a = "<a href=\"" ++ a ++ "\">" ++ a ++ "\"</a>"
+   mkp :: String -> String
+   mkp wrd =
+     case parse url "" wrd of
+       Right b -> b
+       Left _ -> wrd
+
+url :: Parser String
+url = do
+  uri <- string "http:" <|> string "https:"
+  _ <- string "//"
+  rest <- many $ noneOf " "
+  return $ urlify $ uri ++ "//" ++ rest
+ where
+   urlify :: String -> String
+   urlify b = "<a href=\"" ++ b ++ "\">" ++ b ++ "</a>"
 
 {% endhighlight %}
 
-This is a quick one-off before I take off for the afternoon.  I'll come back and make sure it compiles, etc.
-
-
-Anyway, It's simple, works well (or it will later tonight), and it's fast.
-
+Granted, this isn't the prettiest code in the world, but it's simple and it does work for at least most links.  Ok, well, a lot of links.
 
 How can I use this in Lua, Ada, Basic, C, C++, C#, Chicken Scheme, D, Erlang, Go, Haskell (lawl), Java, node.js, Obj-C, ooc, Perl, Python, Racket, Ruby, or Tcl, as well as have it accessable and fast enough that it makes sense not to rewrite it for every language?  Well, I'll show you one way.
 
@@ -71,9 +82,9 @@ sock.send_string(
   [ :op => "parse_urls",
     :data => "This might be a tweet http://slashdot.org with a url inside." ] )
 parsed = sock.recv_string()
-
 {% endhighlight %}
 
 
-All you really have to do is, at the beginning of your program, create a context, then when you are ready to make a connection to a data source, create a socket with "REQ", connect to the pre-determined host and port, send the request, get the response, and then destroy the socket.  This sort of thing is obviously begging for abstraction but I hope you get the general idea.
+While this may be fun to play with, it's obviously not practical to have to make sure that there is another program available to provide url parsing.
 
+What we really need is Erlang-style message passing.  Hrm...
