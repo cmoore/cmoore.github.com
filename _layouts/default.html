@@ -2,57 +2,45 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title>Clint Moore</title>
-   <meta name="author" content="Clint Moore" />
-
-   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
-   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
-</head>
-<body>
-
-<script src="http://ajax.googleapis.com/ajax/libs/webfont/1.0.9/webfont.js"></script>
-<script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Molengo','Anonymous Pro','Ubuntu','Slackey' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-		wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })();
-</script>
-
-<div class="site">
-
-  <div class="title">
-    <a class="ohai" href="/">Clint Moore</a>
-  </div>
-  
-  {{ content }}
-  
-  <div class="footer">
-    <div class="contact">
-      <p>
-        Clint Moore<br />
-        cmoore@wamboli.com
-      </p>
-    </div>
-		<div style="clear:both;"></div>
-    <div class="contact">
-      <p>
-        <a href="http://github.com/cmoore/">github.com/cmoore</a><br />
-        <a href="http://twitter.com/hydo/">twitter.com/hydo</a> <br />
-				<a href="http://www.haskellers.com/user/3/">haskellers.com/user/3/</a><br />
-				<a href="http://www.quora.com/Clint-Moore">quora.com</a> <br />
-      </p>
-    </div>
-  </div>
-</div>
-</body>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Clint Moore</title>
+		<meta name="author" content="Clint Moore" />
+		<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+		<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+	</head>
+	<body>
+		<script src="http://ajax.googleapis.com/ajax/libs/webfont/1.0.9/webfont.js"></script>
+		<script type="text/javascript">
+			WebFontConfig = {
+			google: { families: [ 'Molengo','Anonymous Pro','Ubuntu','Slackey' ] }
+			};
+			(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+			})();
+		</script>
+		<div class="site">
+			<div class="title">
+				<a class="ohai" href="/">Clint Moore</a>
+			</div>
+			{{ content }}
+			<div class="footer" style="clear:both;">
+				<div class="contact">
+					<p>
+						cmoore@wamboli.com &nbsp;
+						<a href="http://github.com/cmoore/">github</a> &nbsp;
+						<a href="http://twitter.com/hydo/">twitter</a>&nbsp;
+						<a href="http://www.haskellers.com/user/3/">haskellers</a>&nbsp;
+						<a href="http://forrst.me/hydo">forrst</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

@@ -1,0 +1,33 @@
+---
+layout: post
+title: CouchDB + Membase + Haskell
+---
+
+h1. {{ page.title }}
+
+p(meta). We're going to socks your rock off.
+
+So, as I'm sure you've heard, CouchIO and Membase have merged today.  The extent to which, I can only guess as I skimmed over the FAQ on couchio.com.  This isn't about that merger though.  Well, I guess it sort of is in so much as I think it's going to be one hell of a fun product when a usable version comes out.
+
+This is actually a post about me going apeshit over the fact that couchapps are going to get a lot more interesting and how I think that I might be able to help things along in my own little way.
+
+The problem I've always had with couchapps, just as a personal preference, is that they require a daemon of some sort on the back end.  Well, ok, they don't require it per se, but every project that does anything beyond db crud seems to.  I'm thinking of Raindrop and jchris's twitter client to name two.  Anyway, this isn't about me bitching about my problems with things.
+
+*Problem*
+
+These backends/helpers/servers require a runtime of some sort.  No matter if you are using node.js, ruby, perl, or whatever else, they all require a runtime of some sort.  This isn't a problem on your local machine, or on a server, but I'm starting to be (finally) converted over to the idea that mobile really is, and to a much larger extent, will be the majority platform worldwide.  The promise of couchdb and couchapps on mobile is the ability to effortlessly access, and just as importantly, sync data on your handheld.
+
+*Solution*
+
+Haskell, of course.  It's my solution for everything!  Ok, joking aside, I think it's a good solution for this problem.  What could be easier to deploy than a single executable?  This does, of course, require GHC to be ported to mobile platforms, but I think interest in that is high enough to expect it to happen in time.
+
+Therein lies a problem though.  Haskell isn't accessible for a lot of people.  People who might find this very useful.  So what do I think I can do?  Well, being the tireless optimist that I am, I think Haskell is the perfect language for taking a problem like this and making it easier and far more approachable.  It will just take a huge amount of forethought and some careful abstraction.
+
+*The type system is your FRIEND, damnit.*
+
+Just as much as the type system can be a roadblock to people new to Haskell, it can also be helpful.  At least I think so.  For instance, I love rules about software development and oh boy does Haskell have it's share of rules.  My favorite is: "Logic errors aside, if the types line up it probably works."  Ok, yea, "probably" works.  We can only hope for absolutes when dealing with the practice of software development since, most of the time, they are few and far between.
+
+Why couldn't you generate a skeleton application ala @rails init@ and then add functionality to it via generators?  If the types line up, it should just work.  Right?  Guys?
+
+I'm going to try to get something dead simple running in the next few days toward this.  I think this can be done, and well.  We'll see.
+
