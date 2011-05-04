@@ -67,14 +67,14 @@ ul.posts {
   margin-bottom: 2em;
 }
 
-  ul.posts li {
-    line-height: 1.75em;
-  }
+ul.posts li {
+   line-height: 1.75em;
+}
 
-  ul.posts span {
-    color: black;
-    font-size: 13px;
-  }
+ul.posts span {
+   font-weight: bold;
+   font-size: 11px;
+}
 
 /*****************************************************************************/
 /*
