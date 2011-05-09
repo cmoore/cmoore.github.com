@@ -1,0 +1,24 @@
+---
+layout: post
+title: The Don Stewart Method
+---
+
+h1. {{ page.title }}
+
+p(meta). Release it
+
+After reading "this":http://www.shimweasel.com/2011/05/08/the-stewart-method-how-not-to-suck I got inspired and I'm going to do my best to get something out the door before Sunday of next week.  I think I'll start with taking a hard look at "Web.Mongrel2":http://hackage.haskell.org/package/web-mongrel2 and maybe release my little framework-let "Ivy":https://github.com/cmoore/ivy once I get it stablized.
+
+I really do need to do something like this as my clones directory has more than a few false starts on projects.  In fact, to really shame myself into doing something about it, I'll just list them.
+
+h4. All of these are in various states of not-done.
+
+* A CouchDB library.
+* The haskell version of my old twitter client.
+** It just needs to be updated for OAuth. Hrm.. maybe this is what I'll work on.
+* The start of an OTP manager for Haskell daemons.
+** The idea is to use ZeroMQ to communicate OTP actions between Erlang and Haskell.
+** This could potentially extend to a lot of languages.
+* My experiments with automatic text formatting to detect different structures.
+
+Ugh, the list goes on.  No time like now to start on it.
