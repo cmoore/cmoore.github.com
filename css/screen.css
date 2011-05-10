@@ -9,7 +9,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans';
 }
 
 html, body {
@@ -19,13 +18,13 @@ html, body {
 
 body {
   background-color: white;
-  font: 13.34px 'Open Sans', Verdana, tahoma, helvetica, arial, clean, sans-serif;
-  *font-size: 13;
   text-align: center;
+  font: 15px 'Open Sans', Verdana, tahoma, helvetica, arial, clean, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 h1 {
@@ -83,7 +82,6 @@ ul.posts span {
 /*****************************************************************************/
 
 .site {
-  font-size: 13px;
   text-align: justify;
   width: 60em;
   margin: 3em auto 2em auto;
@@ -120,7 +118,6 @@ ul.posts span {
 }
 
 .site .footer {
-    font-size: 13px;
     color: #666;
     border-top: 4px solid #eee;
     margin-top: 2em;
@@ -172,7 +169,6 @@ ul.posts span {
 #post code {
     border: 1px solid #ddd;
     background-color: #eef;
-    font-size: 13px;
     padding: 0 .2em;
 }
 
@@ -202,22 +198,10 @@ ul.posts span {
 
 
 .ohai {
-    font-family: 'Open Sans';
-    font-size:22px;
+    font-size:26px;
 	  color: #555;
 }
 .ohai-small {
-    font-family: 'Open Sans';
-    font-size:13px;
+    font-size:16px;
 	  color: #555;
-}
-
-.wf-active .code, pre {
-		font-family: 'Anonymous Pro' !important; 
-		font-size: 13px;
-		color: #555;
-}
-
-.wf-active a, {
-		font-family: 'Open Sans', serif;
 }

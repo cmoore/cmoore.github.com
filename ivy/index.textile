@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 h1. What is Ivy?
 
@@ -26,23 +26,82 @@ I wanted a simple but reasonably secure web framework-a-like.  Simple and secure
 
 With Ivy, you are given a value of type Request and you are required to give back a value of type IO Response.  Whatever you do in between is your business.  Ivy and its associated modules provide helpers to make this easy, but you aren't required to use them.  In fact, you can easily get away with only importing the start function, Request, and Response from the base Ivy module and you can still get a functioning application.
 
-h1. Wait just a minute here.  You require Mongrel2?
+h1. Wait just a minute here.  It requires Mongrel2?
 
 Right now, yes.  Pluggable frontends are coming and are to be expected from a framework that espouses modularity.  I had to limit things somewhere and that got cut from 1.0.
 
-That said, you should really take a look at Mongrel2 if for nothing else than the lovely way it handles application proxies.  It flips the traditional idea of one large web server proxying out to instances of an application so that application instances can be started at will without interrupting service.  Application instances getting overloaded?  Just start some more and repeat until the frontend proxy starts to smoke or the problem is solved.
+That said, you should really take a look at Mongrel2 if for no other reason than the lovely way it handles application proxies.  It flips the traditional idea of one large web server proxying out to instances of an application so that application instances can be started at will without interrupting service.  Application instances getting overloaded?  Just start some more and repeat until the frontend proxy starts to smoke or the problem is solved.
 
 Mongrel2 is very nice.  Really, you should go read about it when you can.
 
 h1. Do you have something against monads?
 
-No, I simply haven't come across any reason to use one in this project yet.  When I do I'll probably resist or hide that fact from you in the code.
+No, I simply haven't come across any reason to use one in this project yet.  When I do I'll probably resist or hide that fact from you in the code as well as I can.
 
-The idea is this: If I can't get people to understand what exactly monads are, whether they are unable or unwilling, it doesn't mean that they can't benefit from Haskell's other awesome features and performance.  I wrote Haskell daily for more than eight months before I wrote one, and even that I later understood why was unnecessary.  Monads are great and they let you do very powerful things but I do think they are a little overused among Haskell developers.  I believe that web development is, at its core, a very simple endevor and I don't think I need a monad to represent it.  Time will tell though, as I'm not opposed to being proved wrong.
+The idea is this: If I can't get people to understand what exactly monads are, whether they are unable or unwilling, it doesn't mean that they can't benefit from Haskell's other awesome features and performance.  I wrote Haskell daily for more than eight months before needed to write one, and even that I later understood why using one in that particular case was unnecessary.  Monads are great and they let you do very powerful things but I do think they are a little overused among Haskell developers.  I believe that web development is, at its core, a very simple endevor and I don't think I need a monad to represent it.  Time will tell though, as I'm not at all opposed to being proved wrong.
 
-h1. How about an example?
+h1. A simple Ivy application start to finish.
 
-{% highlight haskell %}
+The proxy model in "Mongrel2":http://mongrel2.org/ requires defining two addresses in "ZeroMQ":http://www.zeromq.org format.  These will almost always be of the form "tcp://address:port".  The important thing to grasp here is that Mongrel2 listens on and binds to these addresses, not the other way around.  As such, backends connect to Mongrel2 so there's never a need to restart the front end to add more workers to the backend.
+
+These addresses can be a little confusing at first glance so let's get that out of the way first.  For this example, we'll use the following addresses:
+
+*Mongrel2*
+* recieve spec: tcp://127.0.0.1:9996
+* send spec: tcp://127.0.0.1:9997
+Why do I say spec instead of address?  You'll see...
+&nbsp;
+
+*Our handler*
+
+* subscribe: tcp://127.0.0.1:9997
+* publish: tcp://127.0.0.1:9996
+&nbsp;
+
+The bare minimum mongrel2 config to get started is below and also in the docs/tutorial directory in the source distribution.  This will get you started but you probably want to read "the Mongrel2 manual":http://mongrel2.org/static/mongrel2-manual.html for information on how to set up things like static file handlers, and whatnot.
+
+{% highlight python linenos %}
+ivy_backend = Handler(
+  send_spec='tcp://127.0.0.1:9997',
+  send_ident='ivy-testing',
+  recv_spec='tcp://127.0.0.1:9996',
+  recv_ident=''
+)
+otmongrel2 = Host(
+  name="(.*)", routes={
+    '/': ivy_backend
+})
+main = Server(
+  uuid="our-test",
+  access_log="/tmp/access.log",
+  error_log="/tmp/error.log",
+  chroot="./",
+  pid_file="/tmp/ivy-mongrel2.pid",
+  default_host="(.*)",
+  name="main",
+  port=8080,
+  hosts=[otmongrel2]
+)
+settings = {"zeromq.threads": 1}
+servers = [main]
+{% endhighlight %}
+
+Now you need to convert that into a config database with m2sh like so
+
+{% highlight console linenos %}
+$ m2sh load --config mongrel2.conf --db ivy.sqlite
+{% endhighlight %}
+
+Mongrel2 does some fancy chroot()ing when started, so you'll need to make a directory called tmp wherever you want to run it from.
+
+{% highlight console linenos %}
+$ mkdir tmp
+$ mongrel2 ivy.sqlite our-test
+{% endhighlight %}
+
+At this point if you connect to http://127.0.0.1:8080 the request will hang since there are no workers ready to process requests.  We shall fix that post-haste.
+
+{% highlight haskell linenos %}
 {-# LANGUAGE OverloadedStrings #-}
 use Ivy
 use Ivy.SimpleRoute
@@ -52,36 +111,23 @@ main = do
   start
     "tcp://127.0.0.1:9997"
     "tcp://127.0.0.1:9996"
-    "hreddit"
-    (app tg)
+    "ivy-test"
+    app
 
-app :: Handler
+app :: Request -> IO Response
 app =
-    simple_map [ (is_prefix "/", index_page tg)
-               , (is_prefix "/login", login_page tg)
-               , (is_prefix "/submit", submit tg)
-               , (is_prefix "/register", register tg)]
+  simple_map [ (is_prefix "/", index_page tg) ]
  where
    is_prefix :: String -> Request -> Bool
    is_prefix pf rq = request_path rq == pf
 
-index_page :: Handler
+index_page :: Request -> IO Response
 index_page rq =
-  tg <- tgroup "templates"
-  startt tg "index" >>= finisht rq
-
-login_page :: Handler
-login_page rq =
-  case ((,) <$> rq .>> "login"
-            <*> rq .>> "password") of
-    Nothing -> redirect rq "/"
-    Just (login,password) -> do
-      *magic happens here*
-      tg <- tgroup "templates"
-      startt tg "youareawesome" >>= finisht rq
+  (defaultr rq) { response_content_type = "text/html",
+                  response_body = "<html><body><H1>Hello from Ivy</h1></body></html>" }
 {% endhighlight %}
 
-Does that seem too complicated?  Probably - I've been writing Haskell every day for almost a year now and simple things still seem like witchcraft to me at first glance.
+The start function on line 7 gets the ball rolling by passing the publish and subscribe addresses to connect to, the uuid of the handler and our Does that seem too complicated?  Probably - I've been writing Haskell every day for almost a year now and simple things still seem like witchcraft to me at first glance.
 
 h4. The basics
 
@@ -89,7 +135,7 @@ h4. The basics
 
 Request is defined as
 
-{% highlight haskell %}
+{% highlight haskell linenos %}
 import qualified Data.Text.Lazy as T
 data Request = Request {
   request_uuid :: T.Text,
@@ -109,7 +155,7 @@ data Request = Request {
 
 And Response is
 
-{% highlight haskell %}
+{% highlight haskell linenos %}
 import qualified Data.Text.Lazy as T
 data Response = Response {
   response_uuid :: T.Text,
@@ -125,7 +171,7 @@ data Response = Response {
 
 And finally the Application type which is REALLY COMPLICATED.
 
-{% highlight haskell %}
+{% highlight haskell linenos %}
 type Handler = Request -> IO Response
 {% endhighlight %}
 
