@@ -6,20 +6,23 @@ h1. What is Ivy?
 Ivy is a web framework for Haskell that tries to combine drop-dead simplicity with badass performance.
 
 h1. Why wouldn't I want to use it?
+
  * It's new and probably buggy in ways I've never considered.
  * It requires Mongrel2 and Mongrel2 is new-ish.
  * It uses Data.Text throughout and some people seem to balk at that.
-
+&nbsp;
 
 h1. Why would I want to use it?
- # It uses Mongrel2
- # It's very easy to extend.
- # It's simple.  No monads outside of IO.
- # It uses Data.Text throughout which makes it even faster.
+
+ * It uses Mongrel2
+ * It's very easy to extend.
+ * It's simple.  No monads outside of IO.
+ * It uses Data.Text throughout which makes it even faster.
+&nbsp;
 
 h1. What is Ivy?
 
-I wanted a simple but reasonably secure web framework-a-like.  Simple and secure should not be opposing qualities.  In addition to this, it should also be modular.  Very, very modular.  That means as imposing as little as possible on the application being developed.  Too many frameworks (and yes, it pains me to use that word, but that's what this is) promise modularity but impose sometimes unecessary things on applications.  This is, or rather can be, the nature of mid-sized projects in Haskell.  I, however, try hard to take a different approach.
+I wanted a simple but reasonably secure web framework-a-like.  Simple and secure should not be opposing qualities.  In addition to this, it should also be modular.  Very, very modular.  That means as imposing as little as possible on the application being developed.  Too many frameworks (and yes, it pains me to use that word, but that's what this is) promise modularity but impose sometimes unecessary things on applications.  This is, or rather can be, the nature of mid-sized projects in Haskell.  I try hard to take a different approach.
 
 With Ivy, you are given a value of type Request and you are required to give back a value of type IO Response.  Whatever you do in between is your business.  Ivy and its associated modules provide helpers to make this easy, but you aren't required to use them.  In fact, you can easily get away with only importing the start function, Request, and Response from the base Ivy module and you can still get a functioning application.
 
@@ -35,7 +38,7 @@ h1. Do you have something against monads?
 
 No, I simply haven't come across any reason to use one in this project yet.  When I do I'll probably resist or hide that fact from you in the code.
 
-The idea is this: If I can't get people to understand what exactly monads are, whether they are unable or unwilling, it doesn't mean that they can't benefit from Haskell's other awesome features and performance.  I wrote Haskell daily and didn't need to write a monad until almost 8 months in, and even that I later understood was unnecessary.  Monads are great and they let you do very powerful things.  That said, I do think they are a little overused among Haskell developers.  I belive that web development is, at its core, a very simple thing and I don't think I need a monad to represent it.  Time will tell though, as I'm not opposed to being proved wrong.
+The idea is this: If I can't get people to understand what exactly monads are, whether they are unable or unwilling, it doesn't mean that they can't benefit from Haskell's other awesome features and performance.  I wrote Haskell daily for more than eight months before I wrote one, and even that I later understood why was unnecessary.  Monads are great and they let you do very powerful things but I do think they are a little overused among Haskell developers.  I believe that web development is, at its core, a very simple endevor and I don't think I need a monad to represent it.  Time will tell though, as I'm not opposed to being proved wrong.
 
 h1. How about an example?
 
@@ -123,6 +126,6 @@ data Response = Response {
 And finally the Application type which is REALLY COMPLICATED.
 
 {% highlight haskell %}
-type Application = Request -> IO Response
+type Handler = Request -> IO Response
 {% endhighlight %}
 
