@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+h1. What is Ivy?
+
+I wanted a simple but reasonably secure web framework-a-like.  Simple and secure should not be opposing qualities.
+
+h1. Give me an example
+
+Assuming you've decided to use HStringTemplate
+
+```haskell
+main :: IO ()
+main = do
+  tg <- tgroup "templates"
+  start
+    "tcp://127.0.0.1:9997"
+    "tcp://127.0.0.1:9996"
+    "hreddit"
+    (app tg)
+```
+
+This is a test of static pages.
+
+h4. Honk honk
+
+That was a title.
