@@ -1,28 +1,128 @@
 ---
 layout: default
 ---
+h1. What is Ivy?
+
+Ivy is a web framework for Haskell that tries to combine drop-dead simplicity with badass performance.
+
+h1. Why wouldn't I want to use it?
+ * It's new and probably buggy in ways I've never considered.
+ * It requires Mongrel2 and Mongrel2 is new-ish.
+ * It uses Data.Text throughout and some people seem to balk at that.
+
+
+h1. Why would I want to use it?
+ # It uses Mongrel2
+ # It's very easy to extend.
+ # It's simple.  No monads outside of IO.
+ # It uses Data.Text throughout which makes it even faster.
 
 h1. What is Ivy?
 
-I wanted a simple but reasonably secure web framework-a-like.  Simple and secure should not be opposing qualities.
+I wanted a simple but reasonably secure web framework-a-like.  Simple and secure should not be opposing qualities.  In addition to this, it should also be modular.  Very, very modular.  That means as imposing as little as possible on the application being developed.  Too many frameworks (and yes, it pains me to use that word, but that's what this is) promise modularity but impose sometimes unecessary things on applications.  This is, or rather can be, the nature of mid-sized projects in Haskell.  I, however, try hard to take a different approach.
 
-h1. Give me an example
+With Ivy, you are given a value of type Request and you are required to give back a value of type IO Response.  Whatever you do in between is your business.  Ivy and its associated modules provide helpers to make this easy, but you aren't required to use them.  In fact, you can easily get away with only importing the start function, Request, and Response from the base Ivy module and you can still get a functioning application.
 
-Assuming you've decided to use HStringTemplate
+h1. Wait just a minute here.  You require Mongrel2?
 
-```haskell
+Right now, yes.  Pluggable frontends are coming and are to be expected from a framework that espouses modularity.  I had to limit things somewhere and that got cut from 1.0.
+
+That said, you should really take a look at Mongrel2 if for nothing else than the lovely way it handles application proxies.  It flips the traditional idea of one large web server proxying out to instances of an application so that application instances can be started at will without interrupting service.  Application instances getting overloaded?  Just start some more and repeat until the frontend proxy starts to smoke or the problem is solved.
+
+Mongrel2 is very nice.  Really, you should go read about it when you can.
+
+h1. Do you have something against monads?
+
+No, I simply haven't come across any reason to use one in this project yet.  When I do I'll probably resist or hide that fact from you in the code.
+
+The idea is this: If I can't get people to understand what exactly monads are, whether they are unable or unwilling, it doesn't mean that they can't benefit from Haskell's other awesome features and performance.  I wrote Haskell daily and didn't need to write a monad until almost 8 months in, and even that I later understood was unnecessary.  Monads are great and they let you do very powerful things.  That said, I do think they are a little overused among Haskell developers.  I belive that web development is, at its core, a very simple thing and I don't think I need a monad to represent it.  Time will tell though, as I'm not opposed to being proved wrong.
+
+h1. How about an example?
+
+{% highlight haskell %}
+{-# LANGUAGE OverloadedStrings #-}
+use Ivy
+use Ivy.SimpleRoute
+
 main :: IO ()
 main = do
-  tg <- tgroup "templates"
   start
     "tcp://127.0.0.1:9997"
     "tcp://127.0.0.1:9996"
     "hreddit"
     (app tg)
-```
 
-This is a test of static pages.
+app :: Handler
+app =
+    simple_map [ (is_prefix "/", index_page tg)
+               , (is_prefix "/login", login_page tg)
+               , (is_prefix "/submit", submit tg)
+               , (is_prefix "/register", register tg)]
+ where
+   is_prefix :: String -> Request -> Bool
+   is_prefix pf rq = request_path rq == pf
 
-h4. Honk honk
+index_page :: Handler
+index_page rq =
+  tg <- tgroup "templates"
+  startt tg "index" >>= finisht rq
 
-That was a title.
+login_page :: Handler
+login_page rq =
+  case ((,) <$> rq .>> "login"
+            <*> rq .>> "password") of
+    Nothing -> redirect rq "/"
+    Just (login,password) -> do
+      *magic happens here*
+      tg <- tgroup "templates"
+      startt tg "youareawesome" >>= finisht rq
+{% endhighlight %}
+
+Does that seem too complicated?  Probably - I've been writing Haskell every day for almost a year now and simple things still seem like witchcraft to me at first glance.
+
+h4. The basics
+
+"web-mongrel2":https://github.com/cmoore/web-mongrel2 defines two main types that Ivy uses, Request and Response.
+
+Request is defined as
+
+{% highlight haskell %}
+import qualified Data.Text.Lazy as T
+data Request = Request {
+  request_uuid :: T.Text,
+  request_path :: T.Text,
+  request_id :: T.Text,
+  request_headers :: [(T.Text,T.Text)],
+  request_method :: RequestMethod,
+  request_version :: T.Text,
+  request_uri :: T.Text,
+  request_pattern :: T.Text,
+  request_accept :: T.Text,
+  request_host :: T.Text,
+  request_query_string :: T.Text,
+  request_user_agent :: T.Text
+  } deriving (Show)
+{% endhighlight %}
+
+And Response is
+
+{% highlight haskell %}
+import qualified Data.Text.Lazy as T
+data Response = Response {
+  response_uuid :: T.Text,
+  response_id :: T.Text,
+  response_path :: T.Text,
+  response_headers :: [(T.Text,T.Text)],
+  response_status :: T.Text,
+  response_charset :: T.Text,
+  response_content_type :: T.Text,
+  response_body :: T.Text
+  } deriving (Show)
+{% endhighlight %}
+
+And finally the Application type which is REALLY COMPLICATED.
+
+{% highlight haskell %}
+type Application = Request -> IO Response
+{% endhighlight %}
+
