@@ -1,0 +1,11 @@
+---
+layout: default
+title: Why Ivy?
+
+h1. {{ page.title }}
+
+This is a test of static pages.
+
+h4. Honk honk
+
+That was a title.
