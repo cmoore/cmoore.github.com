@@ -1,0 +1,11 @@
+---
+layout: post
+title: Nothing to say?
+---
+
+h1. {{ page.title }}
+
+p(meta). I wish more people did this.
+
+I decided I wanted to update this site with a post, but I couldn't think of anything interesting to say.  So I just stopped there.  I wish more people did that.
+
