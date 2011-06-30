@@ -20,4 +20,9 @@ I have 20 of the 4x xeon machines that I can use if I really, really have to.  I
 
 What I want to do is come up with a nice way to add and remove application servers as well as have a centralized storage that can also scale.  I'll be using MongoDB for all of the backend storage so I don't think this will be a problem.  My initial plan is to configure the application servers to also act as storage nodes and use MongoDBs auto-balancing cluster feature thing.  I can't remember offhand what it's called, but I remember setting it up at one point.
 
+h3. Much much much later
+
+I'm glad no one reads this but me.  This whole endevour ended up being a huge yak-shaving expedition to which I ended up saying "fuckit, why don't I just finish the original project?"
+
+Not to figure out how to skip step 1 of that process.
 
