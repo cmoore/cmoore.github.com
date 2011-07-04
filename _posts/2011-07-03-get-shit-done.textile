@@ -1,0 +1,10 @@
+---
+layout: post
+title: Get shit done
+---
+
+h1. {{ page.title }}
+
+p(meta). Looking busy...
+
+Was writing my 100th Typeclass trying to coerce data from a db to a template with Snap when I decided that was enough.  I know how easy it can be and I miss that.
