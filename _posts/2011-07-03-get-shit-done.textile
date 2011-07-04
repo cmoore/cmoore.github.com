@@ -8,3 +8,7 @@ h1. {{ page.title }}
 p(meta). Looking busy...
 
 Was writing my 100th Typeclass trying to coerce data from a db to a template with Snap when I decided that was enough.  I know how easy it can be and I miss that.
+
+Much later...
+
+I got a somewhat simple web application up and running with Mustache, loaded it, went to the index handler and everything looked good.  Went to test my mustache handler and BOOM.  Syntax error.  Now I remember why I use Haskell.  I like immediately knowing if my code is going to work.
