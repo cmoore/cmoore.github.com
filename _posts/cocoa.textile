@@ -1,0 +1,23 @@
+---
+layout: post
+title: Using Haskell in Cocoa applications.
+---
+
+h1. {{ page.title }}
+
+p(meta). Well, one approach at least.
+
+h3. First off..
+
+All of this is based off of work by Tim Scheffler who got all of this rolling with his code "in his HSOBJC repo.":https://github.com/tscheff/HSOBJC_Test All I really did was make it work with XCode 4.x which, I admit, wasn't that much work comparatively.
+
+h3. Now that credit has gone where it's due.
+
+I have set up an "application shell to build off of":https://github.com/technoloft/cocoa-app-shell that builds a simple application.
+
+h3. Let's build something simple.
+
+Check out the repo and then rename it if you like.  You can do that by slow-clicking on the project name.
+
+!/1.png!
+
