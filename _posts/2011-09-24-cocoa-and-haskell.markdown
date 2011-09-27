@@ -103,5 +103,4 @@ methods =  M.fromList $ map ( first T.pack )  methodTable
 Wrap up
 ---
 
-I have delivered one application using this and have plans for a couple more.  I'm hoping to update the cocoa-app-shell project with a new version that has [Sparkle](http://sparkle.andymatuschak.org/) already configured.  We used it in the first deliverable and it really enjoyed using it.
-
+I have delivered one application using this and have plans for a couple more.  I'm hoping to update the cocoa-app-shell project with a new version that has [Sparkle](http://sparkle.andymatuschak.org/) already configured.  We used it in the first deliverable and it really enjoyed it.
