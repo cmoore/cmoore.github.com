@@ -21,7 +21,7 @@ I tested this with Mac OS X 10.7, XCode 4.1, and GHC 7.0.4.  If run into problem
 The basics
 ---
 
-* Check out a copy of [cocoa-app-shell](/cocoa-app-shell)
+* Check out a copy of [cocoa-app-shell](https://github.com/cmoore/cocoa-app-shell)
 
 * Give it a spanky new name.  If you are using XCode 4 this is relatively easy if you slow-click on the top level of the project heirarchy.
 
