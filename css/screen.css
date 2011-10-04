@@ -196,6 +196,10 @@ ul.posts span {
     margin-bottom: 1em;
 }
 
+.cite {
+ font-family: 'Anonymous Pro';
+ width: 70%;
+}
 
 .ohai {
     font-size:26px;

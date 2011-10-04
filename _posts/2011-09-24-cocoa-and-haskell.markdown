@@ -1,6 +1,6 @@
 ---
 layout: post
-title: It's like that one Reeses commercial everyone cites.
+title: Cocoa and Haskell love-in.
 ---
 
 {{ page.title }}

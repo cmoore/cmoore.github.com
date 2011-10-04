@@ -1,24 +1,18 @@
 ---
 layout: post
-title: Boing Boing Boing
+title: Oh, I'm not crazy? (ADHD ftw)
 ---
 
 {{ page.title }}
 ---
 
 <p class="meta">
-This is an optional tag... line... thingy.
+My professional life apparently begins at 39.
 </p>
 
-# Draft
+# Abstract (a professional way to say tl;dr)
 
-I haven't even proofread this yet.  So don't grade my spelling and grammar.
-
-
-# Disclaimer
-
-This post talks very frankly about a personal experience and includes, in places, some coarse language.
-
+This is a post about my experience first denying that I had a problem with, and, much later, getting help with Adult ADHD.
 
 # Let's play pretend!
 
@@ -26,9 +20,9 @@ Imagine for a moment that from the time you woke up every morning to the time yo
 
 # Enough is enough.
 
-At the tender age of 39 I'm finally getting some help with this.  I've always secretly thought that there was something fundamentally wrong with me.  For instance, in grade school I was sent to remdial math classes.  It wasn't until high school that I figured out that if I drank enough coffee and smoked enough cigarettes, I could exert a noticeable amount of control over this.  Then in my senior year of high school, I discovered that marijuana almost completely removed them from the equation.  The problem with that, aside from the social implications, was that it slowed my head down far too much to be very productive.  In hindsight, I was probably smoking way too much.  Much later, working for an independent game company, I discovered others that had found the same solution to the problem.  One in particular could hardly get anything done, but was a Rembrandt with a text editor and by far one of the best programmers I've ever met when he was completely stoned.
+At the tender age of 39 I'm finally getting some help with this.  I've always secretly thought that there was something fundamentally wrong with me.  For instance, in grade school I was sent to remedial math classes.  It wasn't until high school that I figured out that if I drank enough coffee and smoked enough cigarettes, I could exert a noticeable amount of control over this.  Then in my senior year of high school, I discovered that marijuana almost completely removed them from the equation.  The problem with that, aside from the social implications, was that it slowed my head down far too much to be very productive.  In hindsight, I was probably smoking way too much.  Much later, working for an independent game company, I discovered others that had found the same solution to the problem.  One in particular could hardly get anything done, but was a Rembrandt with a text editor and by far one of the best programmers I've ever met when he was completely stoned.
 
-Looking back, this has affected every aspect of my life.  Looking back at my career, I have been astoundingly fortunate to work at some of the best tech companies in the business despite my completely shoddy track record.  In two instances in particular, I was in a position to walk away with an obscene amount of money for my work.
+This has affected every aspect of my life.  Looking back at my career, I have been astoundingly fortunate to work at some of the best tech companies in the business despite my completely shoddy track record.  In two instances in particular, I was in a position to walk away with an obscene amount of money for my work.
 
 # Not faking it.
 
@@ -36,7 +30,7 @@ The problem with me isn't lack of technical ability, in fact if I can get past t
 
 # That's not enough!
 
-Still, as much as I know, and I'll be the first to admit that the more I learn, the more I learn that I only know a fraction of what's there, that's not enough!  It's not enough to be fortunate enough to have a job doing what you do when you have spare time.  The practice of taking an idea and creating something useful from it is, aside from hanging out with my family, what I truely love to do.  The degree of drive I feel to do it isn't even remotely approached by anything else that I do.  Still, it's not enough.
+Still, as much as I know, and I'll be the first to admit that the more I learn, the more I learn that I only know a fraction of what's there, that's not enough!  It's not enough to be fortunate enough to have a job doing what you do when you have spare time.  The practice of taking an idea and creating something useful from it is, aside from hanging out with my family, what I truly love to do.  The degree of drive I feel to do it isn't even remotely approached by anything else that I do.  Still, it's not enough.
 
 Looking back, it's easy to see what happened.  At least, I think I understand what happened.  Distilled, what I end up doing is having complete conversations, either individually or in a meeting, with people wherein I might make a commitment to do something, and ten minutes later not even remember that I had the conversation.  Sounds crazy, doesn't it?  I don't know how many times I've been told `Clint, I thought you said you were going to ...`, or `Clint, I thought we talked about ...`, or `Who was supposed to handle that?  Clint?  Oh, ok, So, Clint, where are we at on that?`.  This is all one thing if you are a teenager, but I'm a grown man, damned near 40, with kids, a wife, and a mortgage.
 
@@ -53,4 +47,3 @@ Discoveries
 + I was much calmer, and actually a little sleepy.  Speed has the opposite effect on people like me.  A vente americano from Starbucks can put me to sleep. I'm not kidding about this.  I had to stop drinking them because I was nodding off at work.
 
 + I listened to my wife and had a conversation with her that didn't consist of me waiting for her to stop talking so I could say the much more important thing that was on my mind at that very second.
-
