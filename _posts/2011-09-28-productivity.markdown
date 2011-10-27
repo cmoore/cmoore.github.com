@@ -34,7 +34,7 @@ Still, as much as I know, and I'll be the first to admit that the more I learn, 
 
 Looking back, it's easy to see what happened.  At least, I think I understand what happened.  Distilled, what I end up doing is having complete conversations, either individually or in a meeting, with people wherein I might make a commitment to do something, and ten minutes later not even remember that I had the conversation.  Sounds crazy, doesn't it?  I don't know how many times I've been told `Clint, I thought you said you were going to ...`, or `Clint, I thought we talked about ...`, or `Who was supposed to handle that?  Clint?  Oh, ok, So, Clint, where are we at on that?`.  This is all one thing if you are a teenager, but I'm a grown man, damned near 40, with kids, a wife, and a mortgage.
 
-# Fuck this shit.
+# Determination
 
 Well, I can either give up or I can do something about it.  I'm choosing to do something about it.  I had a formal diagnosis of adult ADHD [1] and am trying a low dose of a medication.  The last thing I want to do is rely on a pill to take my problem away.  I'm taking it to level the playing field and help me help myself more effectively.  This combined with the admission to myself that I'm just, by god, going to have to start writing stuff down and the time is now to start making myself do it.
 
