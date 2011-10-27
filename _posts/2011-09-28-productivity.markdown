@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Oh, I'm not crazy? (ADHD ftw)
+title: Oh, I'm not crazy?
 ---
 
 {{ page.title }}
