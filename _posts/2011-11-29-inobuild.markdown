@@ -1,0 +1,13 @@
+---
+layout: post
+title: inobuild
+---
+
+{{ page.title }}
+====
+
+
+Finally going to make a post about this since it takes far less time to do that than it does to find that damned gist every time I want to install it.
+
+<script src="https://gist.github.com/602440.js?file=inobuild.hs"></script>
+
