@@ -209,3 +209,8 @@ ul.posts span {
     font-size:16px;
 	  color: #555;
 }
+
+
+.gist {
+   font-family: 'Ubuntu Mono', 'Bitstream Vera Sans Mono', 'Courier', monospace;
+}
