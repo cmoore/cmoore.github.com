@@ -1,0 +1,31 @@
+---
+layout: post
+title: My DJ Diary
+---
+
+{{ page.title }}
+====
+
+I've always wanted to learn how to scratch and mix since the first time I heard DJ Magic Mike on a copy of a copy of a copy of a mixtape that a friend gave me when I was living in Hawaii.  Well, damnit, I'm going for it full force.  I've started this a couple of times in the past and always walked away from it but not this time.  There's just too much good inspiration out there and I have some really good ideas that I'd like to see made into tracks.
+
+I have two Stanton T.50s and a Numark mixer, some break records, and a whole pile of vynil I borrowed from my mom to pull samples from.
+
+So this is a diary of my progress.  In the past, my approach has been to just get on the tables and fart around until I found something that sounded good.  Well, not anymore.  I'm going to approach it like I approached software development.  Start small and don't expect to make huge leaps every day, but rather, every time I get a large block of time on the tables, take one thing - transforms, crab scratch, tip scratch, etc. and get it down to where I'm satisfied with it three out of five times.  I'm by far my biggest critic.  That's the problem with being a realist.  I want to be *good* not just have people tell me how good I am.  And to be good, I have to geniuinely get this stuff down before I'll be able to make music that I can stand to listen to in the car.
+
+Every time I get some time on the tables, I'll update this post and probably chide myself about my lack of progress, but oh well.  It's what will keep me going.
+
+
+
+Listening Recommendations:
+
+Get a Spotify account or one of the other streaming services.  Spotify has a *ton* of stuff I never expected and I can vouch for the tracks being available there.
+
+The best technical DJ in the world.
+DJ Qbert - Invasion From Planet Sqratch
+
+His royal highness.
+DJ Magic Mike - Give 'em an example of how a DJ works
+
+This dude has completely changed the way I look at scratching.  Never heard anything like it in my life and can't get enough of it.
+Kid Koala - Basin Street Blues or Drunk Trumpet
+
