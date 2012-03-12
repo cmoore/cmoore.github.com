@@ -9,20 +9,24 @@ title: ivy.io
 		<ul class="posts">
 			{% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+       {% if post.tagline %}
+          <small style="padding-left:25px;">or, {{ post.tagline }}</small>
+       {% endif %}
       {% endfor %}
 		</ul>
 	</div>
 	<div style="width:50%;float:right;">
-    <h1>Projects</h1>
+    <h1>Software</h1>
 		<ul class="posts">
-			<li><a href="http://github.com/cmoore/cocoa-app-shell">Cocoa and Haskell</a></li>
-			<li><a href="http://github.com/cmoore/web-mongrel2">web-mongrel2</a></li>
-		</ul>
-		
-		<h1>I used to work on</h1>
-		<ul class="posts">
-			<li><a href="http://github.com/cmoore/rwc">RWC in Haskell</a></li>
-			<li><a href="http://github.com/cmoore/rwc-erlang">RWC in Erlang</a></li>
+      <li><a href="http://github.com/cmoore/canute">Canute</a> / <a href="http://github.com/cmoore/hunchentoot-sandbox">Sandbox</a>
+      <small>Web based development in Common Lisp.</small></li>
+			<li><a href="http://github.com/cmoore/cocoa-app-shell">Cocoa and Haskell</a><br>
+      <small>Writing native Cocoa applications in Haskell.<br />(lots of fun here)</small></li>
+			<li><a href="http://github.com/cmoore/web-mongrel2">web-mongrel2</a><br />
+      <small>Connecting Haskell web applications to <a href="mongrel2.org">Mongrel2</a></small></li>
+			<li><a href="http://github.com/cmoore/rwc">Royale with Cheese</a><br />
+      <small>(A web based social client in Haskell)</small></li>
+			<li>&nbsp;&nbsp;&nbsp;<a href="http://github.com/cmoore/rwc-erlang">... and in Erlang</a></li>
 		</ul>
 	</div>
   <div style="clear:both;"></div>
