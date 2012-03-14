@@ -221,9 +221,12 @@ ul.posts span {
    font-size: 564px;
    color: black;
    z-index: -1;
-   float: left;
-   position: fixed;
-   top: 350px;
-   left: 20px;
    opacity: .05;
+
+   position: absolute;
+   top: 50%;
+   height: 240px;
+   margin-top: -120px;
 }
+
+
