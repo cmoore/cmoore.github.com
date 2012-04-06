@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Fun with elisp
-tagline: Au-toe-ma-tic.
 ---
 
 {{ page.title }}
