@@ -18,7 +18,7 @@ Which, as an also-Haskell programmer, that is just far too verbose.
 
 The solution was, as always, a macro.
 
-{% highlight lisp %}
+{% highlight common lisp %}
 (defmacro @-map (toapply list)
   `(mapcar #'(lambda (x)
               (,@toapply x)) ,base))
