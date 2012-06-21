@@ -24,3 +24,15 @@ The solution was, as always, a macro.
               (,@toapply x)) ,base))
 {% endhighlight %}
 
+Which using
+
+{% highlight cl %}
+(macroexpand '(c-map (get-element "uid") (docs (db.find "categories" :all))))
+{% endhighlight %}
+
+generates
+
+{% highlight cl %}
+(MAPCAR #'(LAMBDA (X) (GET-ELEMENT "uid" X)) (DOCS (DB.FIND "categories" :ALL)))
+{% endhighlight %}
+
