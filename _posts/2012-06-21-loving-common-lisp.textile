@@ -3,8 +3,8 @@ layout: post
 title: An elementary macro in Common Lisp
 ---
 
-{{ page.title }}
-====
+h1. {{ page.title }}
+
 
 I decided today that I wanted to partially apply functions in Common Lisp like you can do in Haskell.  It's Lisp, so that was easy.
 
