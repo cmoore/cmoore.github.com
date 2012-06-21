@@ -27,7 +27,7 @@ The solution was, as always, a macro.
 Which using
 
 {% highlight cl %}
-(macroexpand '(c-map (get-element "uid") (docs (db.find "categories" :all))))
+(macroexpand '(@-map (get-element "uid") (docs (db.find "categories" :all))))
 {% endhighlight %}
 
 generates
@@ -35,4 +35,6 @@ generates
 {% highlight cl %}
 (MAPCAR #'(LAMBDA (X) (GET-ELEMENT "uid" X)) (DOCS (DB.FIND "categories" :ALL)))
 {% endhighlight %}
+
+Now I just need to figure out a better name for this.  I'm sure I'll be making a lot more of this sort of thing.
 
