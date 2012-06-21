@@ -1,0 +1,26 @@
+---
+layout: post
+title: My love for Common Lisp
+tagline: Grows with ever page of Let over Lambda
+---
+
+* {{ page.title }}
+
+I decided today that I wanted to partially apply functions in Common Lisp like you can do in Haskell.  It's Lisp, so that was easy.
+
+In the package `cl-mongo`, `get-element` takes a name and a document and returns the value or nil for that element of the doc.  I was messing around in the repl viewing different documents and every time I did so I had to do something like this:
+
+#+begin_src lisp
+(mapcar #'(lambda (x) (get-element "uid" x)) (car (db.find "stuff" :all)))
+#+end_src
+
+Which, as an also-Haskell programmer, that is just far too verbose.
+
+The solution was, as always, a macro.
+
+#+begin_src lisp
+(defmacro @-map (toapply list)
+  `(mapcar #'(lambda (x)
+              (,@toapply x)) ,base))
+#+end_src
+
