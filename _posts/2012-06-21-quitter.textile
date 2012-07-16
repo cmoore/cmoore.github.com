@@ -1,0 +1,11 @@
+---
+layout: post
+title: Quitting Smoking
+---
+
+h1. {{ page.title }}
+
+
+I'm quitting smoking, and it's going to suck ass for quite a while.
+
+I wonder if I'll update this page at all with my angsty ranty belligerent keyboard pukings.  Time will tell.
