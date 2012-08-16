@@ -4,8 +4,7 @@ title: The not so obvious stuff.
 tagline: and the stuff that will mysteriously explode.
 ---
 
-{{ page.title }}
-====
+<legend> {{ page.title }} </legend>
 
 So you want to start writing some haskell?  Here's some of the stuff that's not completely obvious when you are setting up a dev environment.
 
