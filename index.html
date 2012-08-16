@@ -3,37 +3,51 @@ layout: default
 title: ivy.io
 ---
 
-<div id="home">
-	<div style="width:50%;float:left;">
-		<h1>Rants and Such</h1>
+<div class="row">
+<div class="span6">
+	<h1>Rants and Such</h1>
+	<ul>
+		{% for post in site.posts %}
+    <li>
+      <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+      {% if post.tagline %}
+      <br /><small style="padding-left:25px;">or, {{ post.tagline }}</small>
+      {% endif %}
+    </li>
+    {% endfor %}
+	</ul>
+</div>
+<div class="span6">
+  <h1>Software</h1>
 		<ul class="posts">
-			{% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-       {% if post.tagline %}
-          <small style="padding-left:25px;">or, {{ post.tagline }}</small>
-       {% endif %}
-      {% endfor %}
-		</ul>
-	</div>
-	<div style="width:50%;float:right;">
-    <h1>Software</h1>
-		<ul class="posts">
-      <li><a href="http://github.com/cmoore/canute">Canute</a> / <a href="http://github.com/cmoore/hunchentoot-sandbox">Sandbox</a>
-      <small>Web based development in Common Lisp.</small></li>
-			<li><a href="http://github.com/cmoore/cocoa-app-shell">Cocoa and Haskell</a><br>
-      <small>Writing native Cocoa applications in Haskell.<br />(lots of fun here)</small></li>
-			<li><a href="http://github.com/cmoore/web-mongrel2">web-mongrel2</a><br />
-      <small>Connecting Haskell web applications to <a href="mongrel2.org">Mongrel2</a></small></li>
+      <li>
+        <a href="http://github.com/cmoore/canute">Canute</a> / <a href="http://github.com/cmoore/hunchentoot-sandbox">Sandbox</a><br />
+        <small>Web based development in Common Lisp.</small>
+      </li>
+			<li>
+        <a href="http://github.com/cmoore/cocoa-app-shell">Cocoa and Haskell</a><br />
+        <small>Writing native Cocoa applications in Haskell.</small>
+      </li>
+			<li>
+        <a href="http://github.com/cmoore/web-mongrel2">web-mongrel2</a><br />
+        <small>Connecting Haskell web applications to <a href="mongrel2.org">Mongrel2</a></small>
+      </li>
 			<li><a href="http://github.com/cmoore/rwc">Royale with Cheese</a><br />
       <small>(A web based social client in Haskell)</small></li>
 			<li>&nbsp;&nbsp;&nbsp;<a href="http://github.com/cmoore/rwc-erlang">... and in Erlang</a></li>
 		</ul>
-	</div>
-  <div style="clear:both;"></div>
-  <p class="cite">
-    "Taught that programming - or worse 'developing software' - is like a routine engineering activity, many find difficulty seeing writing as a model or even a metaphor for programming.  Writing is creative, it is self-expression, it is art, which is to say it isn't a science and unlike science and engineering, it isn't a serious activity.  Judgements like this, though, are easiest made by people who don't seriously engage in making both science and art.  Art, engineering, and science are - in that order - part of a continuum of finding truth in the world and about ourselves."<br />
+</div>
+
+<div class="row">
+  <div class="span8 offset2">
+    <blockquote>
+      <p>
+      "Taught that programming - or worse 'developing software' - is like a routine engineering activity, many find difficulty seeing writing as a model or even a metaphor for programming.  Writing is creative, it is self-expression, it is art, which is to say it isn't a science and unlike science and engineering, it isn't a serious activity.  Judgements like this, though, are easiest made by people who don't seriously engage in making both science and art.  Art, engineering, and science are - in that order - part of a continuum of finding truth in the world and about ourselves."</p>
+      <small>Richard P. Gabriel <br />"Successful Lisp: How to understand and use Common Lisp" p1</small>
+</blockqote>
   <p style="padding-left:157px;">
-    -- Richard P. Gabriel <br />"Successful Lisp: How to understand and use Common Lisp" p1
+    
   </p>
   </p>
+</div>
 </div>

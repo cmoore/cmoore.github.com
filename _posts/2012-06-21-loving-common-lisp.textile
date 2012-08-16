@@ -3,7 +3,7 @@ layout: post
 title: An elementary macro in Common Lisp
 ---
 
-h1. {{ page.title }}
+<legend> {{ page.title }} </legend>
 
 
 I decided today that I wanted to partially apply functions in Common Lisp like you can do in Haskell.  It's Lisp, so that was easy.
