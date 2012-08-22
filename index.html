@@ -4,22 +4,29 @@ title: ivy.io
 ---
 
 <div class="row">
-<div class="span6">
-	<h1>Rants and Such</h1>
-	<ul>
-		{% for post in site.posts %}
-    <li>
-      <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-      {% if post.tagline %}
-      <br /><small style="padding-left:25px;">or, {{ post.tagline }}</small>
-      {% endif %}
-    </li>
-    {% endfor %}
-	</ul>
-</div>
-<div class="span6">
-  <h1>Software</h1>
+  <div class="span6">
+	  <h1>Rants and Such</h1>
+	  <ul class="unstyled">
+      {% for post in site.posts %}
+      <li>
+        <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+	  </ul>
+  </div>
+  <div class="span6">
+    <h1>Software</h1>
 		<ul class="posts">
+
+      <li>
+        <a href="http://github.com/cmoore/hyperfest">Hyperfest</a><br />
+        <small>A small web app for developing CL apps. Serves the CL Hyperspec.</small>
+      </li>
+      <li>
+        <a href="http://github.com/cmoore/liaison">Liaison</a><br />
+        <small>A very small "who's near me" site.</small>
+      </li>
+
       <li>
         <a href="http://github.com/cmoore/canute">Canute</a> / <a href="http://github.com/cmoore/hunchentoot-sandbox">Sandbox</a><br />
         <small>Web based development in Common Lisp.</small>
