@@ -1,0 +1,14 @@
+
+* {
+    font-family: "Source Sans Pro";
+}
+
+.pdate {
+    word-wrap: none;
+    font-size: 10px;
+}
+
+
+td {
+    //font-size: 14px;
+}
