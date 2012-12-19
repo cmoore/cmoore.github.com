@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fun with elisp
+categories: emacs
 ---
 
 Yea, they definitely could use to be cleaned up some, but they do work, so there's that.
