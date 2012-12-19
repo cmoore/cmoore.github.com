@@ -3,7 +3,8 @@ layout: post
 title: The not so obvious stuff.
 tagline: and the stuff that will mysteriously explode.
 description: Some gotchas when setting up a new Haskell and Cabal development environment.
-keywords: cabal, haskell, ghc, cabal install
+category: haskell
+keywords: [cabal, haskell, ghc, cabal install]
 ---
 
 So you want to start writing some haskell?  Here's some of the stuff that's not completely obvious when you are setting up a dev environment.

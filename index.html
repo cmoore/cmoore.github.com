@@ -6,7 +6,12 @@ title: ivy.io
 <div class="row">
   <div class="span10">
   {% for post in site.posts %}
-    <legend>{{post.title}}</legend>
+    <legend>
+      <a href="{{post.url}}">{{post.title}}</a>
+      {% if post.categories != empty %}
+           &nbsp; <small>({{post.categories | join: ','}})</small>
+      {% endif %}
+    </legend>
     {{post.content}}
   {% endfor %}
   </div>
