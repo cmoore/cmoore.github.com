@@ -6,8 +6,6 @@ description: Some gotchas when setting up a new Haskell and Cabal development en
 keywords: cabal, haskell, ghc, cabal install
 ---
 
-<legend> {{ page.title }} </legend>
-
 So you want to start writing some haskell?  Here's some of the stuff that's not completely obvious when you are setting up a dev environment.
 
 * Cabal, cabal-install, etc.

@@ -3,9 +3,6 @@ layout: post
 title: An elementary macro in Common Lisp
 ---
 
-<legend> {{ page.title }} </legend>
-
-
 I decided today that I wanted to partially apply functions in Common Lisp like you can do in Haskell.  It's Lisp, so that was easy.
 
 In the package `cl-mongo`, `get-element` takes a name and a document and returns the value or nil for that element of the doc.  I was messing around in the repl viewing different documents and every time I did so I had to do something like this:

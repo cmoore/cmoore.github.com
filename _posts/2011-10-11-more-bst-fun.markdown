@@ -3,9 +3,6 @@ layout: post
 title: More fun with BSTs
 ---
 
-{{ page.title }}
-====
-
 I've been trying to make practical(?) use of my search trees.  Here's some rudamentary code for an RSS reader for Inez.
 
 

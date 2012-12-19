@@ -3,10 +3,6 @@ layout: post
 title: inobuild
 ---
 
-{{ page.title }}
-====
-
-
 Finally going to make a post about this since it takes far less time to do that than it does to find that damned gist every time I want to install it.
 
 Ok, well, here's a link too, since the 'view' links from gist are giving raw... like the raw link.

@@ -1,46 +1,47 @@
 ---
 layout: default
 ---
-<div class="span12">
+<div class="row">
+  <div class="span8">
   {{ content }}
+  </div>
+  <div class="span4">
+    <div id="related">
+      <legend>Related</legend>
+      <ul>
+      {% for post in site.related_posts %}
+        <li>
+          <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div class="footer"></div>
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+<div class="row">
+  <div class="span12">
+    <div class="footer"></div>
+    <legend>Discuss</legend>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
     var disqus_shortname = 'hellyeahdotorg'; // required: replace example with your forum shortname
-
-    // The following are highly recommended additional parameters. Remove the slashes in front to use.
-    // var disqus_identifier = 'unique_dynamic_id_1234';
-    // var disqus_url = 'http://example.com/permalink-to-page.html';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
-<div id="related">
-  <h2>Related Posts</h2>
-  <ul>
-    {% for post in site.related_posts limit:3 %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
-<div class="adbump">
-  <script type="text/javascript"><!--
-google_ad_client = "ca-pub-6291127276853360";
-/* wide - annoying - ivy.io */
-google_ad_slot = "2059972021";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-  </script>
-  <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    <div class="adbump">
+      <script type="text/javascript"><!--
+      google_ad_client = "ca-pub-6291127276853360";
+      google_ad_slot = "2059972021";
+      google_ad_width = 728;
+      google_ad_height = 90;
+      </script>
+      <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    </div>
+  </div>
 </div>
