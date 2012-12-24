@@ -2,13 +2,14 @@
 layout: post
 title: An elementary macro in Common Lisp
 categories: lisp
+visible: t
 ---
 
 I decided today that I wanted to partially apply functions in Common Lisp like you can do in Haskell.
 
 In the package `cl-mongo`, `get-element` takes a name and a document and returns the value or nil for that element of the doc.  I was messing around in the repl viewing different documents and every time I did so I had to do something like this:
 
-{% highlight cl %}
+{% highlight common-lisp %}
 (mapcar #'(lambda (x)
    (get-element "uid" x)) (car (db.find "stuff" :all)))
 {% endhighlight %}

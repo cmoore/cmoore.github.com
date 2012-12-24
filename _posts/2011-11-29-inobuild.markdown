@@ -1,6 +1,7 @@
 ---
 layout: post
 title: inobuild
+visible: t
 ---
 
 Finally going to make a post about this since it takes far less time to do that than it does to find that damned gist every time I want to install it.
