@@ -13,7 +13,7 @@ I would argue that macros are one of the more beautiful features of CL, and I th
 
 #### Thinking in macros
 
-What you're telling lisp is, in essence, 'parse this chunk first, and then insert the result into the code, and parse again'.
+What you're telling lisp is, in essence, 'evaluate the form preceded by the backquote first, .... FUCK... this chunk first, and then insert the result into the code, and parse again'.
 
 {% highlight cl %}
 

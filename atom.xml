@@ -3,26 +3,25 @@ layout: nil
 ---
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
-  <title>coyled.com</title>
-  <link href="http://coyled.com/"/>
-  <link type="application/atom+xml" rel="self" href="http://coyled.com/atom.xml"/>
+  <title>ivy.io</title>
+  <link href="http://ivy.io/"/>
+  <link type="application/atom+xml" rel="self" href="http://ivy.io/atom.xml"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://coyled.com/</id>
+  <id>http://ivy.io/</id>
   <author>
-    <name>Dave Coyle</name>
-    <email>coyled@coyled.com</email>
+    <name>Clint Moore</name>
+    <email>clint@ivy.io</email>
   </author>
 
   {% for post in site.posts %}
   <entry>
-    <id>http://coyled.com{{ post.id }}</id>
-    <link type="text/html" rel="alternate" href="http://coyled.com{{ post.url }}"/>
+    <id>http://ivy.io{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://ivy.io{{ post.url }}"/>
     <title>{{ post.title }}</title>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
-      <name>Dave Coyle</name>
-      <uri>http://coyled.com/</uri>
+      <name>Clint Moore</name>
+      <uri>http:/ivy.io/</uri>
     </author>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
