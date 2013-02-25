@@ -7,7 +7,8 @@ layout: post
 
 So, we've decided to make a game.  Not just any game though - it's a game about a chicken with super space powers.  It's drawn with [jawsjs](http://jawsjs.com) with help from [underscore.js](http://underscorejs.org).   The Javascript is also generated on the fly in Common Lisp.  Why, you may ask?  Well, let me show you:
 
-{% highlight cl %}
+```lisp
+
 
 ; The one-stop shop for all of your _.js needs.
 (defpsmacro _ (func (&rest body))
@@ -31,7 +32,7 @@ So, we've decided to make a game.  Not just any game though - it's a game about 
        (powerups.push ,nom)
        (blocks.push ,nom))))
 
-Later, at the Hall of Justice...
+; Later, at the Hall of Justice...
 
 ; As a test, draw all of the sprites from the powerups sheet
 ; so we can confirm that they're being cut correctly.
@@ -47,9 +48,9 @@ Later, at the Hall of Justice...
   (dotimes (i 100)
     (add-powerup :x (+ 30 (* 32 i)) :frame i)))
 
-{% endhighlight %}
+```
 
-{% highlight js %}
+```js
 (function () {
     for (var i = 0; i < 100; i += 1) {
         var g1328 = new jaws.Sprite({ image : 'grass-dirt.png',
@@ -63,36 +64,32 @@ Later, at the Hall of Justice...
         blocks.push(g1328);
     };
 })();
-{% endhighlight %}
+```
 
-{% highlight cl %}
+```lisp
 ; show the collision rect of every powerup.
 (_ map (powerups (lambda (x) ((@ (x.rect) draw)))))
 
-{% endhighlight %}
+```
 
-{% highlight js %}
+```js
 
 _.map(powerups, function (x) {
    return x.rect().draw();
 });
 
-{% endhighlight %}
+```
 
-{% highlight cl %}
-
+```lisp
 ; draw all of the powerups
 (_ map (powerups (lambda (x) ((@ x) draw))))
+```
 
-{% endhighlight %}
-
-{% highlight js %}
-
+```js
 _.map(powerups, function (x) {
     return x(draw);
 });
-
-{% endhighlight %}
+```
 
 Granted, this is just basic substitution and could be done with any reaonably adept text editor with a text expansion plugin.  My next sub-project, however, is to insert the code to move ramdomly, and depending on the situation, attack the player, and I want that to be bound as closely to the individual enemy as possible.  Then, later, I'm going to have to define levels in json (probably json) and then build a level around the player on demand.  Oh, and then there's the fact that powerups need to actually do something to the player.  Plus, the lower level mechanics need to be easily tweakable until I get it just right.
 
