@@ -43,6 +43,29 @@ Later, at the Hall of Justice...
                                    ;scale_image 2
                                    orientation "right"))))
 
+(defun show-powerups ()
+  (dotimes (i 100)
+    (add-powerup :x (+ 30 (* 32 i)) :frame i)))
+
+{% endhighlight %}
+
+{% hightlight javascript %}
+(function () {
+    for (var i = 0; i < 100; i += 1) {
+        var g1328 = new jaws.Sprite({ image : 'grass-dirt.png',
+                                      x : 30 + 32 * i,
+                                      y : world.height - textureSize,
+                                      flipped : null,
+                                      anchor : 'bottom_center'
+                                    });
+        g1328.setImage(pickupsSheet.frames[i]);
+        powerups.push(g1328);
+        blocks.push(g1328);
+    };
+})();
+{% endhighlight %}
+
+{% highlight cl %}
 ; show the collision rect of every powerup.
 (_ map (powerups (lambda (x) ((@ (x.rect) draw)))))
 
