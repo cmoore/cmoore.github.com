@@ -5,7 +5,9 @@ visible: true
 layout: post
 ---
 
-So, we've decided to make a game.  Not just any game though - it's a game about a chicken with super space powers.  It's drawn with [jawsjs](http://jawsjs.com) with help from [underscore.js](http://underscorejs.org).   The Javascript is also generated on the fly in Common Lisp.  Why, you may ask?  Well, let me show you:
+So, we've decided to make a game.  Not just any game though - it's a game about a chicken with super space powers.  It's drawn with [jawsjs](http://jawsjs.com) with help from [underscore.js](http://underscorejs.org).
+
+The Javascript is also generated on the fly in Common Lisp because I hate javascript with all of my little black heart.
 
 {% highlight cl %}
 
