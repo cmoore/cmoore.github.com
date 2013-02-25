@@ -1,7 +1,7 @@
 ---
 title: Maintaining Focus
 categories: adhd
-visible: true
+visible: false
 layout: post
 ---
 
