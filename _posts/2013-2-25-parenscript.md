@@ -49,7 +49,7 @@ Later, at the Hall of Justice...
 
 {% endhighlight %}
 
-{% hightlight javascript %}
+{% hightlight js %}
 (function () {
     for (var i = 0; i < 100; i += 1) {
         var g1328 = new jaws.Sprite({ image : 'grass-dirt.png',
