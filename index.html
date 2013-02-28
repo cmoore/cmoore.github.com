@@ -4,7 +4,7 @@ title: ivy.io
 ---
 
 <div class="row">
-  <div class="span10">
+  <div class="span8">
   {% for post in site.posts %}
     {% if post.visible %}
     <legend>
@@ -17,17 +17,24 @@ title: ivy.io
   {% endif %}
   {% endfor %}
   </div>
-  <div class="span2">
+  <div class="span4">
     <div style="margin-top:20px;"></div>
     <ul>
     {% for post in site.posts %}
       {% if post.visible %}
       <li style="margin-top:5px;">
         <a href="{{post.url}}">{{ post.title }}</a>
+        {% if post.categories.size > 0 %}
+        <small>({{post.categories}})</small>
+        {% endif %}
       </li>
       {% endif %}
     {% endfor %}
     </ul>
+    <div class="lisp"></div>
+    <div class="symbolics"></div>
+    
+   
     <script type="text/javascript"><!--
     google_ad_client = "ca-pub-6291127276853360";
     /* tall - blog */

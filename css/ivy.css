@@ -21,3 +21,19 @@ pre {
     margin-top: 5px;
     margin-bottom: 15px;
 }
+
+.lisp {
+    width: 100px;
+    height: 71px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(/lisp-logo-transparent.png);
+}
+
+.symbolics {
+    width: 150px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(/symbolics.png);
+}
