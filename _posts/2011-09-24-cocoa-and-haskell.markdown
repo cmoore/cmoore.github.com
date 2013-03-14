@@ -21,11 +21,11 @@ I tested this with Mac OS X 10.7, XCode 4.1, and GHC 7.0.4.  If run into problem
 
 * Give it a spanky new name.  If you are using XCode 4 this is relatively easy if you slow-click on the top level of the project heirarchy.
 
-![one](/1.png)
+![one](/images/1.png)
 
 If you did that right, you'll see something like this, assuming you decided to name the project "Does It Work"
 
-![one](/2.png)
+![one](/images/2.png)
 
 #### Ok, how does it all actually work?
 
@@ -38,7 +38,7 @@ The second is calling functions directly.  This is a bit more involved.
 
 *cocoa-app-shell* is about as simple as you can get.
 
-![App Shell](/app-window.png)
+![App Shell](/images/app-window.png)
 
 If you enter some text in the textarea by *From Event*, it will convert it to upper case by simply calling `toUpper`.  This is bound programatically by haskell using the following code.
 
