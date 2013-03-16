@@ -33,12 +33,11 @@ The Javascript is also generated on the fly in Common Lisp because I hate javasc
        ((@ ,nom set-image) (aref pickups-sheet.frames ,frame))
        (powerups.push ,nom)
        (blocks.push ,nom))))
+{% endhighlight %}
 
-; Later, at the Hall of Justice...
+As a test, draw all of the sprites from the powerups sheet so we can confirm that they're being cut correctly.
 
-; As a test, draw all of the sprites from the powerups sheet
-; so we can confirm that they're being cut correctly.
-
+{% highlight cl %}
 (setf powerups (new -array))
 (setf pickups-sheet (new (jaws.-sprite-sheet
                            (create image "/blocks/pickups.png"
@@ -49,30 +48,33 @@ The Javascript is also generated on the fly in Common Lisp because I hate javasc
 (defun show-powerups ()
   (dotimes (i 100)
     (add-powerup :x (+ 30 (* 32 i)) :frame i)))
-
 {% endhighlight %}
 
+expanded javascript:
+
 {% highlight js %}
-(function () {
+function showPowerups() {
     for (var i = 0; i < 100; i += 1) {
-        var g1328 = new jaws.Sprite({ image : 'grass-dirt.png',
-                                      x : 30 + 32 * i,
-                                      y : world.height - textureSize,
-                                      flipped : null,
-                                      anchor : 'bottom_center'
-                                    });
-        g1328.setImage(pickupsSheet.frames[i]);
-        powerups.push(g1328);
-        blocks.push(g1328);
+        var g0 = new jaws.Sprite({ image : 'grass-dirt.png',
+                                   x : 30 + 32 * i,
+                                   y : world.height - textureSize,
+                                   flipped : null,
+                                   anchor : 'bottom_center'
+                                 });
+        g0.setImage(pickupsSheet.frames[i]);
+        powerups.push(g0);
+        blocks.push(g0);
     };
-})();
+};
+
 {% endhighlight %}
 
 {% highlight cl %}
 ; show the collision rect of every powerup.
 (_ map (powerups (lambda (x) ((@ (x.rect) draw)))))
-
 {% endhighlight %}
+
+expands to:
 
 {% highlight js %}
 
@@ -84,12 +86,12 @@ _.map(powerups, function (x) {
 
 {% highlight cl %}
 ; draw all of the powerups
-(_ map (powerups (lambda (x) ((@ x) draw))))
+(_ map (powerups (lambda (x) ((@ x draw)))))
 {% endhighlight %}
 
 {% highlight js %}
 _.map(powerups, function (x) {
-    return x(draw);
+    return x.draw();
 });
 {% endhighlight %}
 
