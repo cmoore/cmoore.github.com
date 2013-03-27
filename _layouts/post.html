@@ -9,8 +9,8 @@ layout: default
     <div id="related">
       <legend>Related | <a href="/">Up</a></legend>
       <ul>
-      {% for post in site.related_posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% for tag in page.categories %}
+        <li><a href="/tag/{{tag}}">{{tag}}</a></li>
       {% endfor %}
       </ul>
     </div>
@@ -21,18 +21,6 @@ layout: default
 <div class="row">
   <div class="span12">
     <div class="footer"></div>
-    <legend>Discuss</legend>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    var disqus_shortname = 'hellyeahdotorg'; // required: replace example with your forum shortname
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
     <div class="adbump">
       <script type="text/javascript"><!--
       google_ad_client = "ca-pub-6291127276853360";

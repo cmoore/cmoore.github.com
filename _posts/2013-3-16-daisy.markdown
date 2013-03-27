@@ -1,6 +1,6 @@
 ---
 title: Daisy
-categories: [lisp,javascript]
+tags: lisp javascript
 visible: true
 layout: post
 ---

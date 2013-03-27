@@ -1,3 +1,10 @@
 markdown: rdiscount
 pygments: true
 paginate: 5
+rdiscount:
+  extensions: [smart]
+
+comments:
+  provider: disqus
+  disqus:
+    short_name: hellyeahdotorg
