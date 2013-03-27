@@ -1,6 +1,7 @@
 markdown: rdiscount
 pygments: true
 paginate: 5
+permalink: date
 rdiscount:
   extensions: [smart]
 
