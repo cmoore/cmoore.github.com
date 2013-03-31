@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fun with elisp
-categories: emacs
+categories: [emacs]
 visible: t
 ---
 

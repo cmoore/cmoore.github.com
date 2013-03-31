@@ -1,6 +1,6 @@
 ---
 title: Resolutions
-categories: lisp
+categories: [lisp]
 visible: true
 layout: post
 ---

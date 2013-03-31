@@ -1,6 +1,6 @@
 ---
 title: Parenscript and Macros
-categories: lisp
+categories: [lisp]
 visible: true
 layout: post
 ---

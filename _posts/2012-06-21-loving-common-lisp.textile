@@ -1,7 +1,7 @@
 ---
 layout: post
 title: An elementary macro in Common Lisp
-categories: lisp
+categories: [lisp]
 visible: t
 ---
 

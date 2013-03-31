@@ -3,7 +3,7 @@ layout: post
 title: The not so obvious stuff.
 tagline: and the stuff that will mysteriously explode.
 description: Some gotchas when setting up a new Haskell and Cabal development environment.
-category: haskell
+categories: [haskell]
 keywords: [cabal, haskell, ghc, cabal install]
 visible: t
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: More fun with BSTs
 visible: t
+categories: [haskell]
 ---
 
 I've been trying to make practical(?) use of my search trees.  Here's some rudamentary code for an RSS reader for Inez.

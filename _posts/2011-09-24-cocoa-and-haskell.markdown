@@ -2,6 +2,7 @@
 layout: post
 title: Cocoa and Haskell love-in.
 visible: t
+categories: [haskell,cocoa]
 ---
 
 This post is about getting the assurance of Haskell with the GUI love of Cocoa.  Though it is definitely Cocoa-specific in places, using the FFI there's no reason why it couldn't be abstracted out to support any GUI environment with a little work.

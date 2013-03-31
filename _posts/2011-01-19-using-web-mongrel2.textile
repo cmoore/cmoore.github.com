@@ -2,6 +2,7 @@
 layout: post
 title: Using web-mongrel2
 visible: t
+categories: [haskell,mongrel2]
 ---
 
 p(meta). The joy of pub/sub
