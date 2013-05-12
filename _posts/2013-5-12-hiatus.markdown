@@ -1,0 +1,8 @@
+---
+title: Hiatus
+categories: []
+visible: true
+layout: post
+---
+
+I've taken a bit of a break from development to concentrate on, among other things, being a dad.  I can't recommend it enough.
