@@ -19,6 +19,7 @@ layout: post
 Later...
 
 {% highlight cl %}
+
 ; Assuming cl-who and parenscript are loaded...
 
 CL-USER> (htm
@@ -29,6 +30,7 @@ CL-USER> (htm
     return $('#title').html('We Like Titles!');
 });</script>
 "</script>"
+
 {% endhighlight %}
 
 
