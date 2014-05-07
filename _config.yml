@@ -1,5 +1,5 @@
 markdown: rdiscount
-pygments: true
+highlighter: pygments
 paginate: 5
 permalink: date
 rdiscount:
