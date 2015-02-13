@@ -12,6 +12,8 @@ title: ivy.io
       {% if post.categories != empty %}
            &nbsp; <small>({{post.categories | join: ', '}})</small>
       {% endif %}
+      <br>
+      <font style="font-size:10px;">{{post.date | date_to_long_string}}</font>
     </p>
   {% endif %}
   {% endfor %}

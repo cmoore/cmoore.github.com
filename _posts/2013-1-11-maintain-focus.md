@@ -1,6 +1,6 @@
 ---
 title: Maintaining Focus
-categories: [adhd]
+categories: []
 visible: false
 layout: post
 ---

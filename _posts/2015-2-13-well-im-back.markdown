@@ -1,6 +1,6 @@
 ---
 title: How Hunchentoot?
-categories: []
+categories: [common-lisp]
 visible: true
 layout: post
 ---

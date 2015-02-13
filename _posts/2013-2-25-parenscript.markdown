@@ -1,6 +1,6 @@
 ---
 title: Parenscript and Macros 2
-categories: [lisp]
+categories: [common-lisp, javascript]
 visible: true
 layout: post
 ---

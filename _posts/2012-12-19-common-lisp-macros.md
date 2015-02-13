@@ -1,6 +1,6 @@
 ---
 title: Understanding Common Lisp Macros
-categories: [lisp]
+categories: [common-lisp]
 visible: false
 layout: post
 ---

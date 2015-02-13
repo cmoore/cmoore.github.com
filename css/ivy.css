@@ -7,10 +7,6 @@ a {
     text-decoration: none !important;
 }
 
-p,li {
-    font-size: 80%;
-}
-
 code {
     font-size: 13px !important;
     font-family: Source Code Pro !important;
