@@ -9,11 +9,13 @@ title: ivy.io
     {% if post.visible %}
     <p>
       <a href="{{post.url}}">{{post.title}}</a>
-      {% if post.categories != empty %}
-           &nbsp; <small>({{post.categories | join: ', '}})</small>
-      {% endif %}
       <br>
-      <font style="font-size:10px;">{{post.date | date_to_long_string}}</font>
+      <font style="font-size:12px;">
+        {% if post.categories != empty %}
+        ({{post.categories | join: ', '}})</small>
+        {% endif %}
+        <span style="float:right;">{{post.date | date_to_long_string}}</span>
+      </font>
     </p>
   {% endif %}
   {% endfor %}
