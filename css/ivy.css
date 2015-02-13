@@ -1,8 +1,6 @@
 
 * {
-    //    font-family: "Source Sans Pro";
-    font-family: "Muli";
-    
+    font-family: "Muli" !important;
 }
 
 a {
@@ -48,6 +46,6 @@ pre {
   margin-left: auto;
 }
 
-.related {
+#related {
     font-size: 15px;
 }
