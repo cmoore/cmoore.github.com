@@ -1,10 +1,14 @@
 
 * {
-    font-family: "Muli" !important;
+    font-family: "Open Sans" !important;
 }
 
 a {
     text-decoration: none !important;
+}
+
+p,li {
+    font-size: 80%;
 }
 
 code {
