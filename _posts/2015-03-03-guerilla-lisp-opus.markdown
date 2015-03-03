@@ -5,10 +5,9 @@ categories: [common-lisp]
 visible: t
 ---
 
-> Path: archiver1.google.com!news1.google.com!newsfeed.stanford.edu!news.ems.psu.edu!news.litech.org!news-xfer.cox.net!prodigy.com!newsmst01.news.prodigy.com!prodigy.com!postmaster.news.prodigy.com!newssvr14.news.prodigy.com.POSTED!df898341!not-for-mail
+
 > From: "Will Hartung" <wi...@msoft.com>
 > Newsgroups: comp.lang.lisp
-> References: <c29fzumv8r9.fsf@no-knife.mit.edu> <u7lm4d3vl7.fsf@snapdragon.csl.sri.com> <_hMy9.1126$Aq5.112540@newsread2.prod.itd.earthlink.net> <4wunnhj3b.fsf@beta.franz.com> <FW8z9.2861$Aq5.303614@newsread2.prod.itd.earthlink.net> <4wunmbjul.fsf@beta.franz.com> <H_uz9.4624$Aq5.499904@newsread2.prod.itd.earthlink.net> <LFIz9.1032$Ya2.36121645@newssvr14.news.prodigy.com> <MPG.18392bb6dfdeaff9896d6@shawnews.vc.shawcable.net> <8kRz9.4286$y56.188794115@newssvr13.news.prodigy.com> <aqphij$du8$1@otis.netspace.net.au>
 > Subject: Guerilla Lisp -- The OPUS (was Re: some stuff about the 2002 International Lisp Conference in SF)
 > Lines: 347
 > X-Priority: 3
@@ -18,10 +17,8 @@ visible: t
 > Message-ID: <4caA9.1572$_27.85095759@newssvr14.news.prodigy.com>
 > NNTP-Posting-Host: 63.202.104.87
 > X-Complaints-To: ab...@prodigy.net
-> X-Trace: newssvr14.news.prodigy.com 1037119360 ST000 63.202.104.87 (Tue, 12 Nov 2002 11:42:40 EST)
 > NNTP-Posting-Date: Tue, 12 Nov 2002 11:42:40 EST
 > Organization: Prodigy Internet http://www.prodigy.com
-> X-UserInfo1: FKPO@SNGPBWWSQDYEZOD]_\@VR]^@B@MCPWZKB]MPXHZUYICD^RAQBKZQTZTX\_I[^G_KGFNON[ZOE_AZNVO^\XGGNTCIRPIJH[@RQKBXLRZ@CD^HKANYVW@RLGEZEJN@\_WZJBNZYYKVIOR]T]MNMG_Z[YVWSCH_Q[GPC_A@CARQVXDSDA^M]@DRVUM@RBM
 > Date: Tue, 12 Nov 2002 16:42:40 GMT
 > Xref: archiver1.google.com comp.lang.lisp:46391
 > 
