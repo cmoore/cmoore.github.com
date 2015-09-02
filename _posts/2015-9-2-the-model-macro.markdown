@@ -20,14 +20,14 @@ Evaluating that will
 1. Create the database 'people'.
 2. Create some functions
 <table class="table table-bordered table-hover table-condensed">
-<tr><td> `people-select` </td><td>Find a record based on a query.
+<tr><td>{% highlight common-lisp %} people-select {% endhighlight %} </td><td>Find a record based on a query.
 {% highlight common-lisp %}
 (people-select (:= 'name "Clint"))
 {% endhighlight %}</td></tr>
-<tr><td> `people-get` </td><td>Find a record with a uuid</td></tr>
-<tr><td> `people-delete`</td><td>Remove a people record from the database.</td></tr>
-<tr><td> `people-get-all` </td><td>Get all of the people records.</td></tr>
-<tr><td> `people-update` </td><td>
+<tr><td>{% highlight common-lisp %} people-get {% endhighlight %} </td><td>Find a record with a uuid</td></tr>
+<tr><td>{% highlight common-lisp %} people-delete {% endhighlight %} </td><td>Remove a people record from the database.</td></tr>
+<tr><td>{% highlight common-lisp %} people-get-all {% endhighlight %} </td><td>Get all of the people records.</td></tr>
+<tr><td>{% highlight common-lisp %} people-update {% endhighlight %} </td><td>
 {% highlight common-lisp %}
 (defvar *t* (car (people-get-all)))           
 (setf (people-name *t*) "Honk")               
