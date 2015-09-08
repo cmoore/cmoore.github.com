@@ -5,6 +5,13 @@ visible: true
 layout: post
 ---
 
+Update
+------
+
+[This is now a project!](http://github.com/cmoore/defmodel)
+
+<hr>
+
 This is my go-to macro for using databases in CL.  It is a modification of a macro that I got from another site, which I can't seem to find at the moment.  I came across it not long ago looking for something else, so I know it's still out there.  I'll update this post when I find it.
 
 {% highlight common-lisp %}
