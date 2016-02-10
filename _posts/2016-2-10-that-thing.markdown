@@ -1,6 +1,6 @@
 ---
 title: That thing I've always wanted.
-categories: [common-lisp]
+categories: [haskell]
 visible: true
 layout: post
 ---
