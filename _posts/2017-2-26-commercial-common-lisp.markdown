@@ -5,6 +5,9 @@ visible: false
 layout: post
 ---
 
+  This is a draft.  It's not even supposed to be visible, but apparently the RSS feed-maker-thingy decided to put it up.  Hopefully no one actually reads it in its unfinished, and un-proofread form.
+
+
   Why, in this modern age where we have tools like Node.js, Docker, Atom.io, and the like, would anyone use a language as old as Common Lisp, or as complicated as Haskell?
 
   The short answers are that the modern world has yet to catch up with the Common Lisp of 30 years ago in many important areas, and, if you can navigate the complexity of modern Javascript with callbacks, promises, and all of the other features that, at least from this angle, seem tacked on, then you'll almost certainly find Haskell far easier to reason about.
