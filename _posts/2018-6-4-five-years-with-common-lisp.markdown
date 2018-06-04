@@ -15,3 +15,5 @@ It's been five years since I resolved to do all of my development in Common Lisp
 - Freedom
 - System Malleability
 - I genuinely feel like I can do anything I can think up... for better or worse.
+
+I'll add to or modify this in the next few days as I think of good ways to expand on these points.
