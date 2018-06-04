@@ -5,6 +5,12 @@ visible: true
 layout: post
 ---
 
+Much later update (Jun 18, 2018)
+-----
+
+This is a really bad idea and you shouldn't do it.  I'm leaving it here because I like seeing how my knowledge has changed and grown over the years.  If you want something like this, you should use generics and methods instead.
+
+
 Update
 ------
 
